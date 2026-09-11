@@ -1,0 +1,14 @@
+app = "ssrjkk-bot"
+primary_region = "ams"
+
+[build]
+
+[env]
+BOT_TOKEN = "8540301462:AAGFEe9oMEhCkJrlcEOjNvvslAtsUx7lmw8"
+
+[mounts]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256
