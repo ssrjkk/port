@@ -1,4 +1,5 @@
 import asyncio
+import json
 import logging
 import os
 from aiogram import Bot, Dispatcher, types, F
@@ -7,70 +8,14 @@ from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "8540301462:AAGFEe9oMEhCkJrlcEOjNvvslAtsUx7lmw8")
 
-GITHUB_USERNAME = "ssrjkk"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(BASE_DIR, "projects.json"), encoding="utf-8") as f:
+    data = json.load(f)
 
-PROJECTS = [
-    {
-        "name": "raven",
-        "desc": "Self-hosted AI-ассистент для корпоративного использования. Подключается к мессенджерам (TG, Slack, Discord), умеет RAG по базам знаний, мониторинг, кодинг и управление ролями (RBAC). Все данные остаются на твоём сервере.\nСтек: Python, FastAPI, TypeScript, React, Go, Rust, Ollama, PostgreSQL",
-        "lang": "Python, TS, Go, Rust",
-        "stars": 3,
-    },
-    {
-        "name": "claude-skills",
-        "desc": "Библиотека из 21 skilla для Claude Code, OpenCode, Cursor и Windsurf. Каждый skill — готовая инструкция для AI-агента по конкретной задаче (тесты, деплой, ревью кода). Билингвальный (EN + RU), Python SDK + CLI, 100% тестовое покрытие.\nСтек: Python, pytest, CI/CD",
-        "lang": "Python",
-        "stars": 1,
-    },
-    {
-        "name": "mobius",
-        "desc": "Универсальный фреймворк для автоматизации тестирования мобильных приложений (Android/iOS). Строится на Appium 2.x с pytest. Есть параллельный запуск, Screen Object Model с защитой от StaleElement и 20+ встроенных утилит.\nСтек: Python, Appium 2.x, pytest",
-        "lang": "Python",
-        "stars": 0,
-    },
-    {
-        "name": "cppload-workflow",
-        "desc": "Enterprise-платформа для нагрузочного тестирования. Ядро написано на C++20 и выдаёт 50k+ RPS. Встроены OAuth2, Vault для секретов, OTLP для метрик и Helm-чарты для деплоя в Kubernetes.\nСтек: C++20, OAuth2, Vault, OTLP, Helm, Kubernetes",
-        "lang": "C++",
-        "stars": 0,
-    },
-    {
-        "name": "qa-helper",
-        "desc": "Набор утилит для QA-инженера: автогенерация тест-кейсов из документации, форматирование отчётов, интеграция с Allure и CI/CD-пайплайнами. Убирает рутину из ежедневной работы.\nСтек: Python, pytest, Allure, Docker, GitHub Actions",
-        "lang": "Python",
-        "stars": 0,
-    },
-    {
-        "name": "bothive",
-        "desc": "Telegram-бот на базе AI для автоматизации бизнес-процессов. Поддерживает чат-боты с клиентами, интеграции с CRM и базами данных, аналитику по диалогам. Быстрый запуск и кастомизация под задачи.\nСтек: Python, aiogram, OpenAI/Ollama, PostgreSQL",
-        "lang": "Python",
-        "stars": 0,
-    },
-    {
-        "name": "noema",
-        "desc": "Платформа для оркестрации AI-моделей. Управление промптами как кодом, цепочки (chains) из нескольких моделей, автоматический мониторинг качества и логирование всех запросов.\nСтек: Python, FastAPI, LangChain, Redis, PostgreSQL",
-        "lang": "Python",
-        "stars": 0,
-    },
-    {
-        "name": "tippy",
-        "desc": "Telegram-бот для чаевых и донатов в криптовалюте. Моментальные переводы между пользователями, уведомления в канал, интеграция с популярными криптокошельками.\nСтек: Python, aiogram, Bitcoin/Ethereum API",
-        "lang": "Python",
-        "stars": 0,
-    },
-]
-
-CHANNELS = [
-    {"name": "B2W Main", "url": "https://t.me/b2wmain"},
-    {"name": "B2W Shitpost", "url": "https://t.me/b2wshitpost"},
-]
-
-LINKS = [
-    {"name": "GitHub", "url": f"https://github.com/{GITHUB_USERNAME}"},
-    {"name": "Telegram", "url": "https://t.me/ssrjkk"},
-    {"name": "Tippy on Base", "url": "https://t.me/tippy_on_base_bot"},
-    {"name": "ssrjkk_bot", "url": "https://t.me/ssrjkk_bot"},
-]
+GITHUB_USERNAME = data["github"]
+PROJECTS = data["projects"]
+CHANNELS = data["channels"]
+LINKS = data["links"]
 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=BOT_TOKEN)

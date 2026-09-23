@@ -1,0 +1,63 @@
+{
+  "github": "ssrjkk",
+  "projects": [
+    {
+      "name": "raven",
+      "lang": "Python, TS, Go, Rust",
+      "stars": 3,
+      "desc": "Self-hosted корпоративный AI-ассистент: мессенджеры (TG, Slack, Discord), RAG по базам знаний, мониторинг, инструменты кодинга и RBAC. Privacy-first и модульный, все данные остаются на твоём сервере.\nСтек: Python, TypeScript, Go, Rust, Ollama, PostgreSQL"
+    },
+    {
+      "name": "drafter",
+      "lang": "TypeScript",
+      "stars": 1,
+      "desc": "Browser-based AI QA-ассистент с agentic-анализом кодовой базы. Генерирует тест-планы, тест-кейсы, код автотестов и баг-репорты.\nСтек: TypeScript"
+    },
+    {
+      "name": "bothive",
+      "lang": "TypeScript",
+      "stars": 0,
+      "desc": "Платформа оркестрации нескольких ботов для Telegram, Twitch, YouTube и Twitter.\nСтек: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry, Docker"
+    },
+    {
+      "name": "mobius",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Универсальный Python-фреймворк для автоматизации тестирования мобильных приложений (Android/iOS) на Appium 2.x + pytest. Параллельный запуск, конфигурационно-управляемое тестирование, Screen Object Model с защитой от StaleElement и 20+ встроенных утилит.\nСтек: Python, Appium 2.x, pytest"
+    },
+    {
+      "name": "noema",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Neuro-symbolic инженерный ассистент: генерирует технические решения, формально верифицирует их через Z3, аудирует каждый шаг и сам чинит инциденты через pull-реквесты.\nСтек: Python, Z3"
+    },
+    {
+      "name": "qualix",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Full-stack QA-платформа для мониторинга API и UI.\nСтек: Python 3.12, FastAPI, Pytest, Playwright, Locust, Kubernetes"
+    },
+    {
+      "name": "tippy-on-base",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Tip-бот на Base: превращает любой Telegram-чат в on-chain экономику сообщества — мгновенные USDC-переводы, реакции, страницы донатов, пейволы и предсказательные рынки. Нулевой газ для пользователей.\nСтек: Python, Ethereum/Base"
+    },
+    {
+      "name": "volley",
+      "lang": "C++",
+      "stars": 0,
+      "desc": "Платформа для нагрузочного тестирования HTTP-сервисов. Асинхронное ядро на C++20 (Boost.Beast/ASIO), YAML-сценарии, OAuth2/Vault/mTLS, OTLP+Prometheus, Python SDK, gRPC control plane, деплой через Helm/Docker.\nСтек: C++20, Boost.Beast, OAuth2, Vault, OTLP, Prometheus, Helm, Kubernetes"
+    }
+  ],
+  "channels": [
+    { "name": "B2W Main", "url": "https://t.me/b2wmain" },
+    { "name": "B2W Shitpost", "url": "https://t.me/b2wshitpost" }
+  ],
+  "links": [
+    { "name": "GitHub", "url": "https://github.com/ssrjkk" },
+    { "name": "Telegram", "url": "https://t.me/ssrjkk" },
+    { "name": "Tippy on Base", "url": "https://t.me/tippy_on_base_bot" },
+    { "name": "ssrjkk_bot", "url": "https://t.me/ssrjkk_bot" }
+  ]
+}
