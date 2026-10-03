@@ -5,49 +5,85 @@
       "name": "raven",
       "lang": "Python, TS, Go, Rust",
       "stars": 3,
-      "desc": "Self-hosted корпоративный AI-ассистент: мессенджеры (TG, Slack, Discord), RAG по базам знаний, мониторинг, инструменты кодинга и RBAC. Privacy-first и модульный, все данные остаются на твоём сервере.\nСтек: Python, TypeScript, Go, Rust, Ollama, PostgreSQL"
+      "desc": "Self-hosted MCP-сервер: 66 инструментов поверх stdio и HTTP. Изоляция воркспейса, авторизация по ключам, MIT-лицензия.\nСтек: Python, TypeScript, Go, Rust, Ollama, PostgreSQL",
+      "desc_en": "Self-hosted MCP server: 66 tools over stdio and HTTP. Workspace confinement, keyed auth, MIT licensed.\nStack: Python, TypeScript, Go, Rust, Ollama, PostgreSQL"
+    },
+    {
+      "name": "agent-skills",
+      "lang": "Python",
+      "stars": 1,
+      "desc": "100 курируемых двуязычных (EN/RU) навыков в универсальном формате Agent Skills для Claude Code, OpenCode, Cursor, Windsurf и любых LLM/GLM-агентов + Python SDK/CLI с CI-валидацией.\nСтек: Python, Agent Skills, SDK/CLI",
+      "desc_en": "100 curated bilingual (EN/RU) skills in the universal Agent Skills format for Claude Code, OpenCode, Cursor, Windsurf and every LLM/GLM agent + Python SDK/CLI with CI-enforced validation.\nStack: Python, Agent Skills, SDK/CLI"
     },
     {
       "name": "drafter",
       "lang": "TypeScript",
       "stars": 1,
-      "desc": "Browser-based AI QA-ассистент с agentic-анализом кодовой базы. Генерирует тест-планы, тест-кейсы, код автотестов и баг-репорты.\nСтек: TypeScript"
+      "desc": "Браузерный AI QA-ассистент с agentic-анализом кодовой базы. Генерирует тест-планы, тест-кейсы, код автотестов и баг-репорты.\nСтек: TypeScript",
+      "desc_en": "Browser-based AI QA assistant with agentic codebase analysis. Generates test plans, test cases, automation code, and bug reports.\nStack: TypeScript"
     },
     {
-      "name": "bothive",
-      "lang": "TypeScript",
+      "name": "shroud",
+      "lang": "Rust, Solidity, TS",
       "stars": 0,
-      "desc": "Платформа оркестрации нескольких ботов для Telegram, Twitch, YouTube и Twitter.\nСтек: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry, Docker"
-    },
-    {
-      "name": "mobius",
-      "lang": "Python",
-      "stars": 0,
-      "desc": "Универсальный Python-фреймворк для автоматизации тестирования мобильных приложений (Android/iOS) на Appium 2.x + pytest. Параллельный запуск, конфигурационно-управляемое тестирование, Screen Object Model с защитой от StaleElement и 20+ встроенных утилит.\nСтек: Python, Appium 2.x, pytest"
-    },
-    {
-      "name": "noema",
-      "lang": "Python",
-      "stars": 0,
-      "desc": "Neuro-symbolic инженерный ассистент: генерирует технические решения, формально верифицирует их через Z3, аудирует каждый шаг и сам чинит инциденты через pull-реквесты.\nСтек: Python, Z3"
-    },
-    {
-      "name": "qualix",
-      "lang": "Python",
-      "stars": 0,
-      "desc": "Full-stack QA-платформа для мониторинга API и UI.\nСтек: Python 3.12, FastAPI, Pytest, Playwright, Locust, Kubernetes"
+      "desc": "Приватный программируемый ML над шифрованными данными: fhEVM-контракты, FHE-обучение поверх шифртекста, ZK-доказательство вычислений, стриминговые выплаты.\nСтек: Solidity, TypeScript SDK, Rust-нода",
+      "desc_en": "Private, programmable ML on encrypted data: fhEVM contracts, FHE training over ciphertext, ZK proof of compute, streaming payouts.\nStack: Solidity, TypeScript SDK, Rust node"
     },
     {
       "name": "tippy-on-base",
       "lang": "Python",
       "stars": 0,
-      "desc": "Tip-бот на Base: превращает любой Telegram-чат в on-chain экономику сообщества — мгновенные USDC-переводы, реакции, страницы донатов, пейволы и предсказательные рынки. Нулевой газ для пользователей.\nСтек: Python, Ethereum/Base"
+      "desc": "Tip-бот на Base: превращает любой Telegram-чат в on-chain экономику сообщества — мгновенные USDC-переводы, реакции, страницы донатов, пейволы и предсказательные рынки. Нулевой газ для пользователей.\nСтек: Python, Ethereum/Base",
+      "desc_en": "Tip bot on Base: turns any Telegram chat into an on-chain community economy — instant USDC transfers, reactions, donation pages, paywalls and prediction markets. Zero gas for users.\nStack: Python, Ethereum/Base"
+    },
+    {
+      "name": "wake",
+      "lang": "Python, TS",
+      "stars": 0,
+      "desc": "Мультивендорный торговый терминал: перп-рынки Lighter + Arcus, copy trading, Predict, AI-агент. Фронтенд React + Vite + Tailwind, бэкенд FastAPI.\nСтек: Python, TypeScript, React, FastAPI, wagmi/viem",
+      "desc_en": "Multi-venue trading terminal: Lighter + Arcus perp markets, copy trading, Predict, AI agent. React + Vite + Tailwind frontend, FastAPI backend.\nStack: Python, TypeScript, React, FastAPI, wagmi/viem"
+    },
+    {
+      "name": "noema",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Нейро-символический инженерный движок: генерирует технические решения, формально верифицирует их через Z3, аудирует каждый шаг и сам чинит инциденты через pull-реквесты.\nСтек: Python, Z3, gRPC",
+      "desc_en": "Neuro-symbolic engineering mind: generates technical solutions, formally verifies them with Z3, audits every thought step, and autonomously fixes its own incidents via pull requests.\nStack: Python, Z3, gRPC"
     },
     {
       "name": "volley",
       "lang": "C++",
       "stars": 0,
-      "desc": "Платформа для нагрузочного тестирования HTTP-сервисов. Асинхронное ядро на C++20 (Boost.Beast/ASIO), YAML-сценарии, OAuth2/Vault/mTLS, OTLP+Prometheus, Python SDK, gRPC control plane, деплой через Helm/Docker.\nСтек: C++20, Boost.Beast, OAuth2, Vault, OTLP, Prometheus, Helm, Kubernetes"
+      "desc": "Платформа нагрузочного тестирования HTTP-сервисов. Асинхронное ядро C++20 (Boost.Beast/ASIO), YAML-сценарии, OAuth2/Vault/mTLS, OTLP+Prometheus, Python SDK, gRPC control plane.\nСтек: C++20, Boost.Beast, OTLP, Prometheus, Kubernetes",
+      "desc_en": "Load-testing platform for HTTP services. C++20 async core (Boost.Beast/ASIO), YAML scenarios, OAuth2/Vault/mTLS, OTLP+Prometheus, Python SDK, gRPC control plane.\nStack: C++20, Boost.Beast, OTLP, Prometheus, Kubernetes"
+    },
+    {
+      "name": "qualix",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "QA-платформа автоматизации — 317 тестов, 100% покрытие, security hardening, готовность к k8s. FastAPI + pytest + Playwright + Locust.\nСтек: Python, FastAPI, Pytest, Playwright, Locust, Kubernetes",
+      "desc_en": "QA automation platform — 317 tests, 100% coverage, security hardening, k8s-ready. FastAPI + pytest + Playwright + Locust.\nStack: Python, FastAPI, Pytest, Playwright, Locust, Kubernetes"
+    },
+    {
+      "name": "qa-arsenal",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Единый QA-монорепозиторий: 5 наборов тестов из 5 репозиториев (hh.ru api+ui, guap.ru python+go, amoCRM). API/UI/load/DB/Kafka тесты — Python/pytest, Playwright, Go.\nСтек: Python, pytest, Playwright, Go, Kafka",
+      "desc_en": "Unified QA monorepo: 5 target suites consolidated from 5 repos (hh.ru api+ui, guap.ru python+go, amoCRM). API/UI/load/DB/Kafka tests — Python/pytest, Playwright, Go.\nStack: Python, pytest, Playwright, Go, Kafka"
+    },
+    {
+      "name": "mobius",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Автоматизация мобильных тестов Android/iOS: Appium 2.x + pytest, screen objects, пул устройств, параллельный запуск. 947 тестов, 99% покрытие.\nСтек: Python, Appium 2.x, pytest",
+      "desc_en": "Mobile test automation for Android and iOS: Appium 2.x + pytest, screen objects, device pooling, parallel execution. 947 tests, 99% coverage.\nStack: Python, Appium 2.x, pytest"
+    },
+    {
+      "name": "bothive",
+      "lang": "TypeScript",
+      "stars": 0,
+      "desc": "Платформа оркестрации нескольких ботов для Telegram, Twitch, YouTube и Twitter.\nСтек: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry",
+      "desc_en": "Multi-bot orchestration platform for Telegram, Twitch, YouTube and Twitter.\nStack: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry"
     }
   ],
   "channels": [
