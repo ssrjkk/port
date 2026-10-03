@@ -2,27 +2,6 @@
   "github": "ssrjkk",
   "projects": [
     {
-      "name": "raven",
-      "lang": "Python, TS, Go, Rust",
-      "stars": 3,
-      "desc": "Self-hosted MCP-сервер: 66 инструментов поверх stdio и HTTP. Изоляция воркспейса, авторизация по ключам, MIT-лицензия.\nСтек: Python, TypeScript, Go, Rust, Ollama, PostgreSQL",
-      "desc_en": "Self-hosted MCP server: 66 tools over stdio and HTTP. Workspace confinement, keyed auth, MIT licensed.\nStack: Python, TypeScript, Go, Rust, Ollama, PostgreSQL"
-    },
-    {
-      "name": "agent-skills",
-      "lang": "Python",
-      "stars": 1,
-      "desc": "100 курируемых двуязычных (EN/RU) навыков в универсальном формате Agent Skills для Claude Code, OpenCode, Cursor, Windsurf и любых LLM/GLM-агентов + Python SDK/CLI с CI-валидацией.\nСтек: Python, Agent Skills, SDK/CLI",
-      "desc_en": "100 curated bilingual (EN/RU) skills in the universal Agent Skills format for Claude Code, OpenCode, Cursor, Windsurf and every LLM/GLM agent + Python SDK/CLI with CI-enforced validation.\nStack: Python, Agent Skills, SDK/CLI"
-    },
-    {
-      "name": "drafter",
-      "lang": "TypeScript",
-      "stars": 1,
-      "desc": "Браузерный AI QA-ассистент с agentic-анализом кодовой базы. Генерирует тест-планы, тест-кейсы, код автотестов и баг-репорты.\nСтек: TypeScript",
-      "desc_en": "Browser-based AI QA assistant with agentic codebase analysis. Generates test plans, test cases, automation code, and bug reports.\nStack: TypeScript"
-    },
-    {
       "name": "shroud",
       "lang": "Rust, Solidity, TS",
       "stars": 0,
@@ -42,6 +21,27 @@
       "stars": 0,
       "desc": "Мультивендорный торговый терминал: перп-рынки Lighter + Arcus, copy trading, Predict, AI-агент. Фронтенд React + Vite + Tailwind, бэкенд FastAPI.\nСтек: Python, TypeScript, React, FastAPI, wagmi/viem",
       "desc_en": "Multi-venue trading terminal: Lighter + Arcus perp markets, copy trading, Predict, AI agent. React + Vite + Tailwind frontend, FastAPI backend.\nStack: Python, TypeScript, React, FastAPI, wagmi/viem"
+    },
+    {
+      "name": "raven",
+      "lang": "Python, TS, Go, Rust",
+      "stars": 3,
+      "desc": "Self-hosted MCP-сервер: 66 инструментов поверх stdio и HTTP. Изоляция воркспейса, авторизация по ключам, MIT-лицензия.\nСтек: Python, TypeScript, Go, Rust, Ollama, PostgreSQL",
+      "desc_en": "Self-hosted MCP server: 66 tools over stdio and HTTP. Workspace confinement, keyed auth, MIT licensed.\nStack: Python, TypeScript, Go, Rust, Ollama, PostgreSQL"
+    },
+    {
+      "name": "agent-skills",
+      "lang": "Python",
+      "stars": 1,
+      "desc": "100 курируемых двуязычных (EN/RU) навыков в универсальном формате Agent Skills для Claude Code, OpenCode, Cursor, Windsurf и любых LLM/GLM-агентов + Python SDK/CLI с CI-валидацией.\nСтек: Python, Agent Skills, SDK/CLI",
+      "desc_en": "100 curated bilingual (EN/RU) skills in the universal Agent Skills format for Claude Code, OpenCode, Cursor, Windsurf and every LLM/GLM agent + Python SDK/CLI with CI-enforced validation.\nStack: Python, Agent Skills, SDK/CLI"
+    },
+    {
+      "name": "drafter",
+      "lang": "TypeScript",
+      "stars": 1,
+      "desc": "Браузерный AI QA-ассистент с agentic-анализом кодовой базы. Генерирует тест-планы, тест-кейсы, код автотестов и баг-репорты.\nСтек: TypeScript",
+      "desc_en": "Browser-based AI QA assistant with agentic codebase analysis. Generates test plans, test cases, automation code, and bug reports.\nStack: TypeScript"
     },
     {
       "name": "noema",
@@ -95,6 +95,6 @@
     { "name": "Telegram", "url": "https://t.me/ssrjkk" },
     { "name": "Tippy on Base", "url": "https://t.me/tippy_on_base_bot" },
     { "name": "Wake Trade", "url": "https://t.me/waketrade_bot" },
-    { "name": "ssrjkk_bot", "url": "https://t.me/ssrjkk_bot" }
+    { "name": "Harvest Testnet", "url": "https://t.me/harvest_testnet_bot" }
   ]
 }
