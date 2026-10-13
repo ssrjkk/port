@@ -96,8 +96,8 @@
       "name": "harvest",
       "lang": "Python",
       "stars": 0,
-      "desc": "Аналитика GitHub-активности: коммиты, стрики и паттерны разработки, живой дашборд.\nСтек: Python",
-      "desc_en": "GitHub contribution analytics and metrics dashboard. Tracks commit activity, streaks and development patterns.\nStack: Python"
+      "desc": "Фермер EVM-тестнетов: автоматический фарм активностей, мультикошельки, операторский портал с live-лентой, планировщик и Telegram-бот.\nСтек: Python",
+      "desc_en": "EVM testnet farmer: automated activity farming, multi-wallet support, operator portal with live feed, scheduler and Telegram bot.\nStack: Python"
     }
   ],
   "channels": [
