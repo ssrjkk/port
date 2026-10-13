@@ -6,7 +6,9 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8540301462:AAGFEe9oMEhCkJrlcEOjNvvslAtsUx7lmw8")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise SystemExit("BOT_TOKEN is not set (use env or `fly secrets set BOT_TOKEN=...`)")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(BASE_DIR, "projects.json"), encoding="utf-8") as f:

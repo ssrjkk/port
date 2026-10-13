@@ -4,7 +4,7 @@ primary_region = "ams"
 [build]
 
 [env]
-BOT_TOKEN = "8540301462:AAGFEe9oMEhCkJrlcEOjNvvslAtsUx7lmw8"
+# BOT_TOKEN is NOT stored here — set it via `fly secrets set BOT_TOKEN=...`
 
 [mounts]
 
