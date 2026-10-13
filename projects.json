@@ -84,6 +84,20 @@
       "stars": 0,
       "desc": "Платформа оркестрации нескольких ботов для Telegram, Twitch, YouTube и Twitter.\nСтек: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry",
       "desc_en": "Multi-bot orchestration platform for Telegram, Twitch, YouTube and Twitter.\nStack: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry"
+    },
+    {
+      "name": "ezzoffer",
+      "lang": "TypeScript",
+      "stars": 0,
+      "desc": "AI-автоотклик на hh.ru: подбор вакансий, сопроводительные письма, управление резюме и Telegram-уведомления.\nСтек: TypeScript, Next.js, React",
+      "desc_en": "AI-powered job search automation for hh.ru: vacancy matching, cover letters, resume management and Telegram notifications.\nStack: TypeScript, Next.js, React"
+    },
+    {
+      "name": "harvest",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Аналитика GitHub-активности: коммиты, стрики и паттерны разработки, живой дашборд.\nСтек: Python",
+      "desc_en": "GitHub contribution analytics and metrics dashboard. Tracks commit activity, streaks and development patterns.\nStack: Python"
     }
   ],
   "channels": [
