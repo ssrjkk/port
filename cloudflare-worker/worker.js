@@ -396,6 +396,17 @@ ${lines.join("\n\n")}`,
   };
 }
 __name(projectsList, "projectsList");
+async function startText(env, ctx, lang) {
+  const total = RAW_PROJECTS.length;
+  let sum = 0;
+  try {
+    const stars = await getStars(env, ctx);
+    for (const p of RAW_PROJECTS) sum += (stars[p.name] ? stars[p.name].stars : 0) || 0;
+  } catch (e) {}
+  if (lang === "ru") return `\u{1F44B} \u041F\u0440\u0438\u0432\u0435\u0442! \u042F \u0431\u043E\u0442 ssrjkk.\n\n\u{1F4E6} \u041F\u0440\u043E\u0435\u043A\u0442\u043E\u0432: ${total} \u00B7 \u2B50 \u0417\u0432\u0451\u0437\u0434: ${sum}\n\n\u041A\u043E\u043C\u0430\u043D\u0434\u044B \u0438\u043B\u0438 \u043A\u043D\u043E\u043F\u043A\u0438 \u043D\u0438\u0436\u0435 \u2014 \u043F\u0440\u043E\u0435\u043A\u0442\u044B, \u0442\u043E\u043F, \u043F\u043E\u0438\u0441\u043A, \u0441\u0441\u044B\u043B\u043A\u0438.`;
+  return `\u{1F44B} Hi! I'm ssrjkk bot.\n\n\u{1F4E6} Projects: ${total} \u00B7 \u2B50 Stars: ${sum}\n\nUse commands or the buttons below \u2014 projects, top, search, links.`;
+}
+__name(startText, "startText");
 async function topText(env, ctx, lang) {
   const stars = await getStars(env, ctx);
   const medals = ["\u{1F947}", "\u{1F948}", "\u{1F949}"];
@@ -472,7 +483,7 @@ async function handleMessage(env, ctx, msg) {
     const ref = payload ? payload.replace(/^ref=/, "") : null;
     if (ref) track(env, ctx, userId, "ref", ref);
     const lang2 = await getLang(env, chatId);
-    await sendMessage(token, chatId, LANG[lang2].start, mainMenu(lang2));
+    await sendMessage(token, chatId, await startText(env, ctx, lang2), mainMenu(lang2));
     return;
   }
   const lang = await getLang(env, chatId);
