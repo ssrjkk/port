@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  worker:
+    name: Cloudflare Worker
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      # Воркер лежит в репозитории собранным, а данные (projects.json) — рядом,
+      # отдельным файлом. Ничто не мешает им разойтись, и расхождение видно
+      # только пользователям бота.
+      - name: Синтаксис воркера
+        run: node --check cloudflare-worker/worker.js
+
+      - name: Данные и бандл не разошлись
+        run: node scripts/check-bundle.mjs
