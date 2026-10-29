@@ -1,7 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 
-import worker from "../cloudflare-worker/worker.js";
+import worker, { projectCard, projectDetailKeyboard } from "../cloudflare-worker/worker.js";
 
 const BASE = "https://bot.example";
 const SECRET = "hook-secret";
@@ -266,16 +267,50 @@ test("project detail without a screenshot sends a text card", async () => {
   assert.match(lastText(calls), /Qualix/);
 });
 
-test("private projects do not expose repository links", async () => {
-  const calls = installFetch();
-  await sendWebhook(makeEnv(), makeCtx(), callbackUpdate("p:port", { chatId: 113 }));
+test("a project marked private hides the repository link", () => {
+  const hidden = {
+    name: "port",
+    title: "Port",
+    lang: "JavaScript",
+    desc: "Каталог проектов в Telegram.",
+    desc_en: "A Telegram project catalogue.",
+    repo: "https://github.com/ssrjkk/port",
+    bot: "https://t.me/ssrjkk_bot",
+    private: true,
+  };
 
-  const sent = callsOf(calls, "sendMessage").at(-1);
-  assert.match(sent.body.text, /исходники закрыты/);
-  assert.doesNotMatch(sent.body.text, /github\.com\/ssrjkk\/port/);
-  const urls = keyboardData(sent).filter((value) => value.startsWith("https://"));
+  const card = projectCard(hidden, {}, "ru");
+  assert.match(card, /исходники закрыты/);
+  assert.doesNotMatch(card, /github\.com\/ssrjkk\/port/);
+  assert.match(projectCard(hidden, {}, "en"), /source private/);
+
+  const urls = projectDetailKeyboard("ru", hidden)
+    .flat()
+    .map((button) => button.url)
+    .filter(Boolean);
   assert.equal(urls.includes("https://github.com/ssrjkk/port"), false);
   assert.ok(urls.includes("https://t.me/ssrjkk_bot"));
+});
+
+test("the live catalogue publishes a repository link for every project", () => {
+  const catalogue = JSON.parse(
+    readFileSync(new URL("../projects.json", import.meta.url), "utf8")
+  );
+
+  assert.equal(catalogue.projects.filter((project) => project.private).length, 0);
+
+  for (const project of catalogue.projects.filter((entry) => entry.repo)) {
+    assert.match(
+      projectCard(project, {}, "ru"),
+      new RegExp(`github\\.com/ssrjkk/${project.name.replace(/\./g, "\\.")}`),
+      `${project.name}: ссылка на репозиторий должна быть в карточке`
+    );
+    const urls = projectDetailKeyboard("ru", project)
+      .flat()
+      .map((button) => button.url)
+      .filter(Boolean);
+    assert.ok(urls.includes(project.repo), `${project.name}: кнопка GitHub должна вести в репозиторий`);
+  }
 });
 
 test("/search escapes HTML in the query and finds projects by stack", async () => {

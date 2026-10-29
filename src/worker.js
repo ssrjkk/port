@@ -267,7 +267,7 @@ function desc(project, lang) {
   return lang === "en" && project.desc_en ? project.desc_en : project.desc;
 }
 
-function projectCard(project, stars, lang) {
+export function projectCard(project, stars, lang) {
   const star = stars && stars[project.name] ? stars[project.name].stars : 0;
   const starCount = star > 0 ? ` ${star}★` : "";
   const links = [];
@@ -285,7 +285,7 @@ function sortByStars(projects, stars) {
   );
 }
 
-function projectDetailKeyboard(lang, project) {
+export function projectDetailKeyboard(lang, project) {
   const row = [];
   if (project.site) row.push({ text: `🌐 ${LANG[lang].siteLabel}`, url: project.site });
   if (project.repo && !project.private) row.push({ text: "GitHub", url: project.repo });

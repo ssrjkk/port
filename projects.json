@@ -169,8 +169,7 @@
       "desc": "Этот бот: каталог проектов в Telegram на Cloudflare Workers, D1 и KV. Два языка, карточки со скриншотами, статистика владельца и рассылка.\nСтек: JavaScript, Cloudflare Workers, D1, KV",
       "desc_en": "This bot: a Telegram project catalogue on Cloudflare Workers, D1 and KV. Two languages, cards with screenshots, owner stats and broadcast.\nStack: JavaScript, Cloudflare Workers, D1, KV",
       "repo": "https://github.com/ssrjkk/port",
-      "bot": "https://t.me/ssrjkk_bot",
-      "private": true
+      "bot": "https://t.me/ssrjkk_bot"
     },
     {
       "name": "b2w-crypto-tg-bot",
@@ -179,8 +178,7 @@
       "stars": 0,
       "desc": "Telegram-платформа для криптопортфеля: отслеживание цен, мониторинг рынка и алерты.\nСтек: Python, aiogram, PostgreSQL",
       "desc_en": "Telegram crypto platform: portfolio tracking, price monitoring and market alerts.\nStack: Python, aiogram, PostgreSQL",
-      "repo": "https://github.com/ssrjkk/b2w-crypto-tg-bot",
-      "private": true
+      "repo": "https://github.com/ssrjkk/b2w-crypto-tg-bot"
     },
     {
       "name": "tt_bot",
@@ -189,8 +187,7 @@
       "stars": 0,
       "desc": "Telegram-бот для университетских лабораторных: сдача работ, отчёты и оценивание.\nСтек: Python, aiogram",
       "desc_en": "Telegram bot for university labs: submissions, reports and grading.\nStack: Python, aiogram",
-      "repo": "https://github.com/ssrjkk/tt_bot",
-      "private": true
+      "repo": "https://github.com/ssrjkk/tt_bot"
     },
     {
       "name": "twinby-swipe-bot",
@@ -199,8 +196,7 @@
       "stars": 0,
       "desc": "Telegram-бот со свайпами для поиска контента и автоматизацией Android/iOS/macOS.\nСтек: Python, Telegram",
       "desc_en": "Telegram swipe bot for content discovery with Android/iOS/macOS automation.\nStack: Python, Telegram",
-      "repo": "https://github.com/ssrjkk/twinby-swipe-bot",
-      "private": true
+      "repo": "https://github.com/ssrjkk/twinby-swipe-bot"
     },
     {
       "name": "ssrjkk.github.io",

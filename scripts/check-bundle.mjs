@@ -178,7 +178,7 @@ for (const [pattern, label] of secretPatterns) {
 }
 
 // --- 8. Форма бандла -----------------------------------------------------
-if (!/export\s*\{\s*\w+\s+as\s+default\s*\}/.test(bundle)) {
+if (!/export\s*\{[^}]*\bas\s+default\b[^}]*\}/.test(bundle)) {
   fail("бандл не экспортирует обработчик по умолчанию — это не модуль воркера");
 }
 const mapMatch = bundle.match(/\/\/# sourceMappingURL=(\S+)/);
