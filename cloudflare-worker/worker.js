@@ -1,109 +1,220 @@
-var __defProp = Object.defineProperty;
-var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
-
 // projects.json
 var projects_default = {
   github: "ssrjkk",
+  hub: "https://ssrjkk.github.io/",
   projects: [
-  {
-    name: "shroud",
-    lang: "Rust, Solidity, TS",
-    stars: 0,
-    desc: "Приватный программируемый ML над шифрованными данными: fhEVM-контракты, FHE-обучение поверх шифртекста, ZK-доказательство вычислений, стриминговые выплаты.\nСтек: Solidity, TypeScript SDK, Rust-нода",
-    desc_en: "Private, programmable ML on encrypted data: fhEVM contracts, FHE training over ciphertext, ZK proof of compute, streaming payouts.\nStack: Solidity, TypeScript SDK, Rust node"
-  },
-  {
-    name: "tippy-on-base",
-    lang: "Python",
-    stars: 0,
-    desc: "Tip-бот на Base: превращает любой Telegram-чат в on-chain экономику сообщества — мгновенные USDC-переводы, реакции, страницы донатов, пейволы и предсказательные рынки. Нулевой газ для пользователей.\nСтек: Python, Ethereum/Base",
-    desc_en: "Tip bot on Base: turns any Telegram chat into an on-chain community economy — instant USDC transfers, reactions, donation pages, paywalls and prediction markets. Zero gas for users.\nStack: Python, Ethereum/Base"
-  },
-  {
-    name: "wake",
-    lang: "Python, TS",
-    stars: 0,
-    desc: "Мультивендорный торговый терминал: перп-рынки Lighter + Arcus, copy trading, Predict, AI-агент. Фронтенд React + Vite + Tailwind, бэкенд FastAPI.\nСтек: Python, TypeScript, React, FastAPI, wagmi/viem",
-    desc_en: "Multi-venue trading terminal: Lighter + Arcus perp markets, copy trading, Predict, AI agent. React + Vite + Tailwind frontend, FastAPI backend.\nStack: Python, TypeScript, React, FastAPI, wagmi/viem"
-  },
-  {
-    name: "raven",
-    lang: "Python, TS, Go, Rust",
-    stars: 3,
-    desc: "Self-hosted MCP-сервер: 66 инструментов поверх stdio и HTTP. Изоляция воркспейса, авторизация по ключам, MIT-лицензия.\nСтек: Python, TypeScript, Go, Rust, Ollama, PostgreSQL",
-    desc_en: "Self-hosted MCP server: 66 tools over stdio and HTTP. Workspace confinement, keyed auth, MIT licensed.\nStack: Python, TypeScript, Go, Rust, Ollama, PostgreSQL"
-  },
-  {
-    name: "agent-skills",
-    lang: "Python",
-    stars: 1,
-    desc: "100 курируемых двуязычных (EN/RU) навыков в универсальном формате Agent Skills для Claude Code, OpenCode, Cursor, Windsurf и любых LLM/GLM-агентов + Python SDK/CLI с CI-валидацией.\nСтек: Python, Agent Skills, SDK/CLI",
-    desc_en: "100 curated bilingual (EN/RU) skills in the universal Agent Skills format for Claude Code, OpenCode, Cursor, Windsurf and every LLM/GLM agent + Python SDK/CLI with CI-enforced validation.\nStack: Python, Agent Skills, SDK/CLI"
-  },
-  {
-    name: "drafter",
-    lang: "TypeScript",
-    stars: 1,
-    desc: "Браузерный AI QA-ассистент с agentic-анализом кодовой базы. Генерирует тест-планы, тест-кейсы, код автотестов и баг-репорты.\nСтек: TypeScript",
-    desc_en: "Browser-based AI QA assistant with agentic codebase analysis. Generates test plans, test cases, automation code, and bug reports.\nStack: TypeScript"
-  },
-  {
-    name: "noema",
-    lang: "Python",
-    stars: 0,
-    desc: "Нейро-символический инженерный движок: генерирует технические решения, формально верифицирует их через Z3, аудирует каждый шаг и сам чинит инциденты через pull-реквесты.\nСтек: Python, Z3, gRPC",
-    desc_en: "Neuro-symbolic engineering mind: generates technical solutions, formally verifies them with Z3, audits every thought step, and autonomously fixes its own incidents via pull requests.\nStack: Python, Z3, gRPC"
-  },
-  {
-    name: "volley",
-    lang: "C++",
-    stars: 0,
-    desc: "Платформа нагрузочного тестирования HTTP-сервисов. Асинхронное ядро C++20 (Boost.Beast/ASIO), YAML-сценарии, OAuth2/Vault/mTLS, OTLP+Prometheus, Python SDK, gRPC control plane.\nСтек: C++20, Boost.Beast, OTLP, Prometheus, Kubernetes",
-    desc_en: "Load-testing platform for HTTP services. C++20 async core (Boost.Beast/ASIO), YAML scenarios, OAuth2/Vault/mTLS, OTLP+Prometheus, Python SDK, gRPC control plane.\nStack: C++20, Boost.Beast, OTLP, Prometheus, Kubernetes"
-  },
-  {
-    name: "qualix",
-    lang: "Python",
-    stars: 0,
-    desc: "QA-платформа автоматизации — 317 тестов, 100% покрытие, security hardening, готовность к k8s. FastAPI + pytest + Playwright + Locust.\nСтек: Python, FastAPI, Pytest, Playwright, Locust, Kubernetes",
-    desc_en: "QA automation platform — 317 tests, 100% coverage, security hardening, k8s-ready. FastAPI + pytest + Playwright + Locust.\nStack: Python, FastAPI, Pytest, Playwright, Locust, Kubernetes"
-  },
-  {
-    name: "qa-arsenal",
-    lang: "Python",
-    stars: 0,
-    desc: "Единый QA-монорепозиторий: 5 наборов тестов из 5 репозиториев (hh.ru api+ui, guap.ru python+go, amoCRM). API/UI/load/DB/Kafka тесты — Python/pytest, Playwright, Go.\nСтек: Python, pytest, Playwright, Go, Kafka",
-    desc_en: "Unified QA monorepo: 5 target suites consolidated from 5 repos (hh.ru api+ui, guap.ru python+go, amoCRM). API/UI/load/DB/Kafka tests — Python/pytest, Playwright, Go.\nStack: Python, pytest, Playwright, Go, Kafka"
-  },
-  {
-    name: "mobius",
-    lang: "Python",
-    stars: 0,
-    desc: "Автоматизация мобильных тестов Android/iOS: Appium 2.x + pytest, screen objects, пул устройств, параллельный запуск. 947 тестов, 99% покрытие.\nСтек: Python, Appium 2.x, pytest",
-    desc_en: "Mobile test automation for Android and iOS: Appium 2.x + pytest, screen objects, device pooling, parallel execution. 947 tests, 99% coverage.\nStack: Python, Appium 2.x, pytest"
-  },
-  {
-    name: "bothive",
-    lang: "TypeScript",
-    stars: 0,
-    desc: "Платформа оркестрации нескольких ботов для Telegram, Twitch, YouTube и Twitter.\nСтек: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry",
-    desc_en: "Multi-bot orchestration platform for Telegram, Twitch, YouTube and Twitter.\nStack: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry"
-  },
-  {
-    name: "ezzoffer",
-    lang: "TypeScript",
-    stars: 0,
-    desc: "AI-автоотклик на hh.ru: подбор вакансий, сопроводительные письма, управление резюме и Telegram-уведомления.\nСтек: TypeScript, Next.js, React",
-    desc_en: "AI-powered job search automation for hh.ru: vacancy matching, cover letters, resume management and Telegram notifications.\nStack: TypeScript, Next.js, React"
-  },
-  {
-    name: "harvest",
-    lang: "Python",
-    stars: 0,
-    desc: "Фермер EVM-тестнетов: автоматический фарм активностей, мультикошельки, операторский портал с live-лентой, планировщик и Telegram-бот.\nСтек: Python",
-    desc_en: "EVM testnet farmer: automated activity farming, multi-wallet support, operator portal with live feed, scheduler and Telegram bot.\nStack: Python"
-  }
-],
+    {
+      name: "shopwatch",
+      title: "Watchop",
+      lang: "JavaScript, Node.js",
+      stars: 0,
+      desc: "Магазин часов Watchop: 313 моделей и 346 SKU, каталог, фильтры, корзина и оформление. Заказ уходит из deep link в Telegram- или MAX-бота.\nСтек: JavaScript, Node.js, Telegram/MAX bots",
+      desc_en: "Watchop store: 313 models and 346 SKUs, catalog, filters, cart and checkout. Orders go from a deep link into a Telegram or MAX bot.\nStack: JavaScript, Node.js, Telegram/MAX bots",
+      repo: "https://github.com/ssrjkk/shopwatch",
+      site: "https://ssrjkk.github.io/shopwatch/",
+      bot: "https://t.me/wwwatchshop_bot",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/shopwatch.jpg"
+    },
+    {
+      name: "bothive",
+      title: "Bothive",
+      lang: "TypeScript",
+      stars: 0,
+      desc: "Self-hosted оркестрация ботов на восемь платформ: очереди BullMQ, движок скриптов в песочнице, webhooks и метрики Prometheus.\nСтек: TypeScript, Fastify, React, Redis, PostgreSQL",
+      desc_en: "Self-hosted bot orchestration for eight platforms: BullMQ queues, sandboxed script engine, webhooks and Prometheus metrics.\nStack: TypeScript, Fastify, React, Redis, PostgreSQL",
+      repo: "https://github.com/ssrjkk/bothive",
+      site: "https://ssrjkk.github.io/bothive/",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/bothive.jpg"
+    },
+    {
+      name: "raven",
+      title: "Raven",
+      lang: "Python, TS, Go, Rust",
+      stars: 3,
+      desc: "Self-hosted MCP-сервер: 66 инструментов поверх stdio и HTTP, изоляция воркспейса, авторизация по ключам, MIT.\nСтек: Python, FastAPI, MCP, Rust/Go",
+      desc_en: "Self-hosted MCP server: 66 tools over stdio and HTTP, workspace confinement, keyed auth, MIT licensed.\nStack: Python, FastAPI, MCP, Rust/Go",
+      repo: "https://github.com/ssrjkk/raven",
+      site: "https://ssrjkk.github.io/raven/",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/raven.jpg"
+    },
+    {
+      name: "wake",
+      title: "Wake",
+      lang: "Python, TS",
+      stars: 0,
+      desc: "Мультивендорный торговый терминал: перп-рынки Lighter и Arcus, funding, copy trading, Predict и AI-агент. Фронтенд React, бэкенд FastAPI.\nСтек: React, FastAPI, PostgreSQL, Telegram bot",
+      desc_en: "Multi-venue trading terminal: Lighter and Arcus perp markets, funding, copy trading, Predict and an AI agent. React frontend, FastAPI backend.\nStack: React, FastAPI, PostgreSQL, Telegram bot",
+      repo: "https://github.com/ssrjkk/wake",
+      site: "https://wake-7k6.pages.dev",
+      bot: "https://t.me/waketrade_bot",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/wake.jpg"
+    },
+    {
+      name: "tippy-on-base",
+      title: "Tippy",
+      lang: "Python",
+      stars: 0,
+      desc: "USDC-экономика в Telegram: чаевые, донат-страницы, рынки предсказаний на LMSR и Mini App на Base. Нулевой газ для пользователей.\nСтек: Python, aiogram, Base/USDC, Mini App",
+      desc_en: "USDC economy in Telegram: tips, donation pages, LMSR prediction markets and a Mini App on Base. Zero gas for users.\nStack: Python, aiogram, Base/USDC, Mini App",
+      repo: "https://github.com/ssrjkk/tippy-on-base",
+      site: "https://tippy-egi.pages.dev",
+      bot: "https://t.me/tippy_on_base_bot",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/tippy.jpg"
+    },
+    {
+      name: "drafter",
+      title: "Drafter",
+      lang: "TypeScript",
+      stars: 1,
+      desc: "Браузерный AI QA-ассистент: тест-планы, кейсы, код автотестов и баг-репорты из описания задачи. Девять провайдеров, свой ключ.\nСтек: TypeScript, React, LLM providers",
+      desc_en: "Browser-based AI QA assistant: test plans, cases, automation code and bug reports from a task description. Nine providers, bring your own key.\nStack: TypeScript, React, LLM providers",
+      repo: "https://github.com/ssrjkk/drafter",
+      site: "https://ssrjkk.github.io/drafter/",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/drafter.jpg"
+    },
+    {
+      name: "ezzoffer",
+      title: "EZOffer",
+      lang: "TypeScript",
+      stars: 0,
+      desc: "Автоматизация поиска работы на hh.ru: подбор вакансий, сопроводительные письма, управление резюме и уведомления в Telegram.\nСтек: TypeScript, Next.js, hh.ru API",
+      desc_en: "Job search automation for hh.ru: vacancy matching, cover letters, resume management and Telegram notifications.\nStack: TypeScript, Next.js, hh.ru API",
+      repo: "https://github.com/ssrjkk/ezzoffer",
+      site: "https://ssrjkk.github.io/ezzoffer/",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/ezzoffer.jpg"
+    },
+    {
+      name: "harvest",
+      title: "Harvest",
+      lang: "Python",
+      stars: 0,
+      desc: "QA-стенд для EVM-тестнетов: флот кошельков, сценарии, здоровье сети и отчёты прогонов. Только тестовые сети, плюс Telegram-бот оператора.\nСтек: Python, EVM testnets, Telegram bot",
+      desc_en: "QA stand for EVM testnets: wallet fleet, scenarios, network health and run reports. Testnets only, plus an operator Telegram bot.\nStack: Python, EVM testnets, Telegram bot",
+      repo: "https://github.com/ssrjkk/harvest",
+      site: "https://ssrjkk.github.io/harvest/",
+      bot: "https://t.me/harvest_testnet_bot",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/harvest.jpg"
+    },
+    {
+      name: "shroud",
+      title: "Shroud",
+      lang: "Rust, Solidity, TS",
+      stars: 0,
+      desc: "Исследовательский прототип обучения ML на шифрованных данных: fhEVM-контракты, STARK-доказательство вычислений, стриминговые выплаты. Не аудирован.\nСтек: Solidity, TypeScript, Rust, fhEVM",
+      desc_en: "Research prototype for ML training over encrypted data: fhEVM contracts, STARK proof of compute, streaming payouts. Not audited.\nStack: Solidity, TypeScript, Rust, fhEVM",
+      repo: "https://github.com/ssrjkk/shroud",
+      site: "https://ssrjkk.github.io/shroud/",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/shroud.jpg"
+    },
+    {
+      name: "agent-skills",
+      title: "Agent Skills",
+      lang: "Python",
+      stars: 2,
+      desc: "100+ курируемых двуязычных навыков (EN/RU) в формате Agent Skills для Claude Code, OpenCode, Cursor и Windsurf, плюс Python SDK и CLI с CI-валидацией.\nСтек: Python, Agent Skills, SDK/CLI",
+      desc_en: "100+ curated bilingual (EN/RU) skills in the Agent Skills format for Claude Code, OpenCode, Cursor and Windsurf, plus a Python SDK and CLI with CI-enforced validation.\nStack: Python, Agent Skills, SDK/CLI",
+      repo: "https://github.com/ssrjkk/agent-skills",
+      site: "https://ssrjkk.github.io/agent-skills/",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/agent-skills.jpg"
+    },
+    {
+      name: "qualix",
+      title: "Qualix",
+      lang: "Python",
+      stars: 0,
+      desc: "QA-платформа автоматизации: 317 тестов на шести уровнях, покрытие 85%+, security hardening, готовность к k8s.\nСтек: Python, FastAPI, pytest, Playwright, Locust",
+      desc_en: "QA automation platform: 317 tests across six layers, 85%+ coverage, security hardening, k8s-ready.\nStack: Python, FastAPI, pytest, Playwright, Locust",
+      repo: "https://github.com/ssrjkk/qualix"
+    },
+    {
+      name: "qa-arsenal",
+      title: "QA Arsenal",
+      lang: "Python",
+      stars: 0,
+      desc: "QA-монорепозиторий: hh.ru API/UI, guap.ru Python/Go и amoCRM. API, UI, нагрузочные, БД- и Kafka-наборы в одном пайплайне.\nСтек: Python, pytest, Playwright, Go, Kafka",
+      desc_en: "QA monorepo: hh.ru API/UI, guap.ru Python/Go and amoCRM. API, UI, load, DB and Kafka suites in one pipeline.\nStack: Python, pytest, Playwright, Go, Kafka",
+      repo: "https://github.com/ssrjkk/qa-arsenal"
+    },
+    {
+      name: "mobius",
+      title: "Mobius",
+      lang: "Python",
+      stars: 0,
+      desc: "Мобильная автоматизация Android и iOS: Appium 2.x + pytest, screen objects, пул устройств, параллельный запуск. 947 тестов, 99% покрытия.\nСтек: Python, Appium 2.x, pytest",
+      desc_en: "Mobile automation for Android and iOS: Appium 2.x + pytest, screen objects, device pooling, parallel runs. 947 tests, 99% coverage.\nStack: Python, Appium 2.x, pytest",
+      repo: "https://github.com/ssrjkk/mobius"
+    },
+    {
+      name: "noema",
+      title: "Noema",
+      lang: "Python",
+      stars: 0,
+      desc: "Нейро-символический инженерный движок: LLM предлагает решения, Z3 проверяет по контрактам, инциденты чинятся через pull-реквесты.\nСтек: Python, Z3, gRPC",
+      desc_en: "Neuro-symbolic engineering engine: an LLM proposes solutions, Z3 verifies them against contracts, incidents are fixed through pull requests.\nStack: Python, Z3, gRPC",
+      repo: "https://github.com/ssrjkk/noema"
+    },
+    {
+      name: "volley",
+      title: "Volley",
+      lang: "C++",
+      stars: 0,
+      desc: "Платформа нагрузочного тестирования HTTP: асинхронное ядро C++20, YAML-сценарии, OAuth2/mTLS/Vault, OTLP и Prometheus, Python SDK.\nСтек: C++20, Boost.Beast, gRPC",
+      desc_en: "HTTP load-testing platform: C++20 async core, YAML scenarios, OAuth2/mTLS/Vault, OTLP and Prometheus, Python SDK.\nStack: C++20, Boost.Beast, gRPC",
+      repo: "https://github.com/ssrjkk/volley"
+    },
+    {
+      name: "port",
+      title: "Port",
+      lang: "JavaScript",
+      stars: 0,
+      desc: "Этот бот: каталог проектов в Telegram на Cloudflare Workers, D1 и KV. Два языка, карточки со скриншотами, статистика владельца и рассылка.\nСтек: JavaScript, Cloudflare Workers, D1, KV",
+      desc_en: "This bot: a Telegram project catalogue on Cloudflare Workers, D1 and KV. Two languages, cards with screenshots, owner stats and broadcast.\nStack: JavaScript, Cloudflare Workers, D1, KV",
+      repo: "https://github.com/ssrjkk/port",
+      bot: "https://t.me/ssrjkk_bot",
+      private: true
+    },
+    {
+      name: "b2w-crypto-tg-bot",
+      title: "B2W Crypto",
+      lang: "Python",
+      stars: 0,
+      desc: "Telegram-платформа для криптопортфеля: отслеживание цен, мониторинг рынка и алерты.\nСтек: Python, aiogram, PostgreSQL",
+      desc_en: "Telegram crypto platform: portfolio tracking, price monitoring and market alerts.\nStack: Python, aiogram, PostgreSQL",
+      repo: "https://github.com/ssrjkk/b2w-crypto-tg-bot",
+      private: true
+    },
+    {
+      name: "tt_bot",
+      title: "TT Bot",
+      lang: "Python",
+      stars: 0,
+      desc: "Telegram-бот для университетских лабораторных: сдача работ, отчёты и оценивание.\nСтек: Python, aiogram",
+      desc_en: "Telegram bot for university labs: submissions, reports and grading.\nStack: Python, aiogram",
+      repo: "https://github.com/ssrjkk/tt_bot",
+      private: true
+    },
+    {
+      name: "twinby-swipe-bot",
+      title: "Twinby",
+      lang: "Python",
+      stars: 0,
+      desc: "Telegram-бот со свайпами для поиска контента и автоматизацией Android/iOS/macOS.\nСтек: Python, Telegram",
+      desc_en: "Telegram swipe bot for content discovery with Android/iOS/macOS automation.\nStack: Python, Telegram",
+      repo: "https://github.com/ssrjkk/twinby-swipe-bot",
+      private: true
+    },
+    {
+      name: "ssrjkk.github.io",
+      title: "Projects hub",
+      lang: "HTML, CSS",
+      stars: 0,
+      desc: "Хаб проектов и услуг: живые интерфейсы, ссылки на сайты и ботов, контакты.\nСтек: HTML, CSS, GitHub Pages",
+      desc_en: "Project and services hub: live interfaces, links to sites and bots, contacts.\nStack: HTML, CSS, GitHub Pages",
+      repo: "https://github.com/ssrjkk/ssrjkk.github.io",
+      site: "https://ssrjkk.github.io/",
+      shot: "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/hub.jpg"
+    }
+  ],
   channels: [
     {
       name: "B2W Main",
@@ -124,24 +235,19 @@ var projects_default = {
       url: "https://t.me/ssrjkk"
     },
     {
-      name: "Tippy on Base",
-      url: "https://t.me/tippy_on_base_bot"
+      name: "Projects hub",
+      url: "https://ssrjkk.github.io/"
     },
     {
-      name: "Wake Trade",
-      url: "https://t.me/waketrade_bot"
-    },
-    {
-      name: "Harvest Testnet",
-      url: "https://t.me/harvest_testnet_bot"
+      name: "Bot catalogue",
+      url: "https://t.me/ssrjkk_bot"
     }
   ]
 };
 
-
-// worker.js
+// src/worker.js
 var GITHUB_USERNAME = projects_default.github;
-var RAW_PROJECTS = projects_default.projects;
+var PROJECTS = projects_default.projects;
 var CHANNELS = projects_default.channels;
 var LINKS = projects_default.links;
 var API = "https://api.telegram.org";
@@ -150,78 +256,98 @@ var STARS_TTL = 3600;
 var PAGE_SIZE = 3;
 var LANG = {
   ru: {
-    start: "\u041F\u0440\u0438\u0432\u0435\u0442! \u042F \u0431\u043E\u0442 ssrjkk.\n\n\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u044B \u0438\u043B\u0438 \u043A\u043D\u043E\u043F\u043A\u0438 \u043D\u0438\u0436\u0435.",
-    menu: "\u0413\u043B\u0430\u0432\u043D\u043E\u0435 \u043C\u0435\u043D\u044E:",
-    projectsTitle: "<b>\u041C\u043E\u0438 \u043F\u0440\u043E\u0435\u043A\u0442\u044B:</b>",
-    linksTitle: "\u0412\u0441\u0435 \u0441\u0441\u044B\u043B\u043A\u0438:",
-    channelsTitle: "Telegram-\u043A\u0430\u043D\u0430\u043B\u044B:",
-    help: "/start - \u0437\u0430\u043F\u0443\u0441\u043A\n/projects - \u043F\u0440\u043E\u0435\u043A\u0442\u044B GitHub\n/search <\u0437\u0430\u043F\u0440\u043E\u0441> - \u043F\u043E\u0438\u0441\u043A \u043F\u0440\u043E\u0435\u043A\u0442\u043E\u0432\n/top - \u0442\u043E\u043F \u043F\u043E \u0437\u0432\u0451\u0437\u0434\u0430\u043C\n/links - \u0441\u0441\u044B\u043B\u043A\u0438\n/channels - \u043A\u0430\u043D\u0430\u043B\u044B\n/about - \u043E\u0431\u043E \u043C\u043D\u0435\n/stats - \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430 (\u0432\u043B\u0430\u0434\u0435\u043B\u0435\u0446)\n/help - \u0441\u043F\u0440\u0430\u0432\u043A\u0430",
-    unknown: "\u041D\u0435 \u0437\u043D\u0430\u044E \u0442\u0430\u043A\u043E\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u044B.\n\n",
-    page: /* @__PURE__ */ __name((cur, total) => `\u0421\u0442\u0440. ${cur}/${total}`, "page"),
-    prev: "\u2B05\uFE0F",
-    next: "\u27A1\uFE0F",
-    projects: "\u{1F4E6} \u041F\u0440\u043E\u0435\u043A\u0442\u044B",
-    top: "\u{1F3C6} \u0422\u043E\u043F",
-    links: "\u{1F517} \u0421\u0441\u044B\u043B\u043A\u0438",
-    channels: "\u{1F4E2} \u041A\u0430\u043D\u0430\u043B\u044B",
-    helpBtn: "\u2753 \u041F\u043E\u043C\u043E\u0449\u044C",
-    lang: "\u{1F310} \u042F\u0437\u044B\u043A",
-    aboutBtn: "\u{1F464} \u041E\u0431\u043E \u043C\u043D\u0435",
-    langMenu: "\u0412\u044B\u0431\u0435\u0440\u0438 \u044F\u0437\u044B\u043A:",
-    langSet: /* @__PURE__ */ __name((l) => `\u042F\u0437\u044B\u043A: ${l === "ru" ? "\u{1F1F7}\u{1F1FA} \u0420\u0443\u0441\u0441\u043A\u0438\u0439" : "\u{1F1EC}\u{1F1E7} English"}`, "langSet"),
-    back: "\u{1F519} \u041D\u0430\u0437\u0430\u0434",
-    notOwner: "\u041A\u043E\u043C\u0430\u043D\u0434\u0430 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430 \u0442\u043E\u043B\u044C\u043A\u043E \u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0443.",
-    notConfigured: "\u0412\u043B\u0430\u0434\u0435\u043B\u0435\u0446 \u043D\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043D (OWNER_ID).",
-    statsEmpty: "\u041F\u043E\u043A\u0430 \u043D\u0435\u0442 \u0434\u0430\u043D\u043D\u044B\u0445.",
-    stats: /* @__PURE__ */ __name((s) => `\u{1F4CA} <b>\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430</b>
+    menu: "Главное меню:",
+    projectsTitle: "<b>Мои проекты:</b>",
+    linksTitle: "Все ссылки:",
+    channelsTitle: "Telegram-каналы:",
+    sitesTitle: "<b>Сайты проектов:</b>",
+    botsTitle: "<b>Telegram-боты:</b>",
+    help: "/start - запуск\n/projects - проекты GitHub\n/sites - сайты проектов\n/bots - Telegram-боты\n/search <запрос> - поиск проектов\n/top - топ по звёздам\n/links - ссылки\n/channels - каналы\n/about - обо мне\n/stats - статистика (владелец)\n/myid - мой ID\n/help - справка",
+    unknown: "Не знаю такой команды.\n\n",
+    page: (cur, total) => `Стр. ${cur}/${total}`,
+    prev: "⬅️",
+    next: "➡️",
+    projects: "📦 Проекты",
+    top: "🏆 Топ",
+    links: "🔗 Ссылки",
+    channels: "📢 Каналы",
+    sites: "🌐 Сайты",
+    bots: "🤖 Боты",
+    helpBtn: "❓ Помощь",
+    lang: "🌐 Язык",
+    aboutBtn: "👤 Обо мне",
+    langMenu: "Выбери язык:",
+    langSet: (l) => `Язык: ${l === "ru" ? "🇷🇺 Русский" : "🇬🇧 English"}`,
+    back: "🔙 Назад",
+    toMenu: "В меню",
+    toProjects: "К проектам",
+    siteLabel: "Сайт",
+    botLabel: "Бот",
+    shotLabel: "Скриншот",
+    privateLabel: "исходники закрыты",
+    notFound: "Проект не найден.",
+    notOwner: "Команда доступна только владельцу.",
+    notConfigured: "Владелец не настроен (OWNER_ID).",
+    statsEmpty: "Пока нет данных.",
+    stats: (s) => `📊 <b>Статистика</b>
 
-\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439: <b>${s.users}</b>
-\u0421\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0439: <b>${s.msgs}</b>
-\u0421\u0435\u0433\u043E\u0434\u043D\u044F: <b>${s.today}</b>
-\u041A\u043E\u043C\u0430\u043D\u0434: <b>${s.cmds}</b>
+Пользователей: <b>${s.users}</b>
+Сообщений: <b>${s.msgs}</b>
+Сегодня: <b>${s.today}</b>
+Команд: <b>${s.cmds}</b>
 
-\u041F\u043E \u043A\u043E\u043C\u0430\u043D\u0434\u0430\u043C:
+По командам:
 ${s.cmdList}
 
-\u0422\u043E\u043F \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439:
+Топ пользователей:
 ${s.topUsers}
 
-\u0420\u0435\u0444\u0435\u0440\u0430\u043B\u044B:
-${s.refList}`, "stats"),
-    searchPrompt: "\u0424\u043E\u0440\u043C\u0430\u0442: /search <\u0437\u0430\u043F\u0440\u043E\u0441>\n\u041D\u0430\u043F\u0440\u0438\u043C\u0435\u0440: /search python",
-    searchEmpty: /* @__PURE__ */ __name((q) => `\u041F\u043E \u0437\u0430\u043F\u0440\u043E\u0441\u0443 \xAB${q}\xBB \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u043E.`, "searchEmpty"),
-    searchTitle: /* @__PURE__ */ __name((q) => `<b>\u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u044B \u043F\u043E \u0437\u0430\u043F\u0440\u043E\u0441\u0443 \xAB${q}\xBB:</b>`, "searchTitle"),
-    topTitle: "<b>\u{1F3C6} \u0422\u043E\u043F \u043F\u0440\u043E\u0435\u043A\u0442\u043E\u0432 \u043F\u043E \u0437\u0432\u0451\u0437\u0434\u0430\u043C:</b>",
-    about: "\u{1F464} <b>\u041E\u0431\u043E \u043C\u043D\u0435</b>\n\n\u0420\u0430\u0437\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u044E \u0431\u043E\u0442\u043E\u0432, AI-\u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u044B, Web3 \u0438 QA-\u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B.\n\u0412\u0441\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B \u2014 \u043E\u0442\u043A\u0440\u044B\u0442\u044B\u0439 \u043A\u043E\u0434 \u043D\u0430 GitHub.\n\n\u{1F6E0} \u0421\u0442\u0435\u043A: Python, TypeScript, Go, Rust, C++, Solidity\n\u{1F4E6} \u041F\u0440\u043E\u0435\u043A\u0442\u044B: 12 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0435\u0432 \u2014 \u043E\u0442 AI-\u0430\u0441\u0441\u0438\u0441\u0442\u0435\u043D\u0442\u043E\u0432 \u0434\u043E \u043D\u0430\u0433\u0440\u0443\u0437\u043E\u0447\u043D\u043E\u0433\u043E \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\n\u{1F4E2} \u041A\u0430\u043D\u0430\u043B\u044B: @b2wmain, @b2wshitpost\n\n\u041A\u043D\u043E\u043F\u043A\u0438 \u043D\u0438\u0436\u0435 \u2014 \u043C\u043E\u0438 \u0441\u0441\u044B\u043B\u043A\u0438 \u{1F447}",
-    broadcastPrompt: "\u0424\u043E\u0440\u043C\u0430\u0442: /broadcast <\u0442\u0435\u043A\u0441\u0442>",
-    broadcastDone: /* @__PURE__ */ __name((ok, fail) => `\u041E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E: <b>${ok}</b>, \u043D\u0435 \u0434\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043E: <b>${fail}</b>.`, "broadcastDone"),
-    broadcastEmpty: "\u0412 \u0440\u0430\u0441\u0441\u044B\u043B\u043A\u0435 \u043D\u0435\u0442 \u043D\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F."
+Рефералы:
+${s.refList}`,
+    searchPrompt: "Формат: /search <запрос>\nНапример: /search python",
+    searchEmpty: (q) => `По запросу «${q}» ничего не найдено.`,
+    searchTitle: (q) => `<b>Результаты по запросу «${q}»:</b>`,
+    topTitle: "<b>🏆 Топ проектов по звёздам:</b>",
+    about: "👤 <b>Обо мне</b>\n\nРазрабатываю ботов, AI-инструменты, Web3 и QA-платформы.\nВсе проекты — открытый код на GitHub.\n\n🛠 Стек: Python, TypeScript, Go, Rust, C++, Solidity\n📦 Проектов: 20 — сайты, боты и инженерные инструменты\n📢 Каналы: @b2wmain, @b2wshitpost\n\nКнопки ниже — мои ссылки 👇",
+    broadcastPrompt: "Формат: /broadcast <текст>",
+    broadcastDone: (ok, fail) => `Отправлено: <b>${ok}</b>, не доставлено: <b>${fail}</b>.`,
+    broadcastEmpty: "В рассылке нет ни одного пользователя."
   },
   en: {
-    start: "Hi! I'm ssrjkk bot.\n\nUse commands or the buttons below.",
     menu: "Main menu:",
     projectsTitle: "<b>My projects:</b>",
     linksTitle: "All links:",
     channelsTitle: "Telegram channels:",
-    help: "/start - start\n/projects - GitHub projects\n/search <query> - search projects\n/top - top by stars\n/links - links\n/channels - channels\n/about - about me\n/stats - stats (owner)\n/help - help",
+    sitesTitle: "<b>Project sites:</b>",
+    botsTitle: "<b>Telegram bots:</b>",
+    help: "/start - start\n/projects - GitHub projects\n/sites - project sites\n/bots - Telegram bots\n/search <query> - search projects\n/top - top by stars\n/links - links\n/channels - channels\n/about - about me\n/stats - stats (owner)\n/myid - my ID\n/help - help",
     unknown: "Unknown command.\n\n",
-    page: /* @__PURE__ */ __name((cur, total) => `Page ${cur}/${total}`, "page"),
-    prev: "\u2B05\uFE0F",
-    next: "\u27A1\uFE0F",
-    projects: "\u{1F4E6} Projects",
-    top: "\u{1F3C6} Top",
-    links: "\u{1F517} Links",
-    channels: "\u{1F4E2} Channels",
-    helpBtn: "\u2753 Help",
-    lang: "\u{1F310} Language",
-    aboutBtn: "\u{1F464} About me",
+    page: (cur, total) => `Page ${cur}/${total}`,
+    prev: "⬅️",
+    next: "➡️",
+    projects: "📦 Projects",
+    top: "🏆 Top",
+    links: "🔗 Links",
+    channels: "📢 Channels",
+    sites: "🌐 Sites",
+    bots: "🤖 Bots",
+    helpBtn: "❓ Help",
+    lang: "🌐 Language",
+    aboutBtn: "👤 About me",
     langMenu: "Choose language:",
-    langSet: /* @__PURE__ */ __name((l) => `Language: ${l === "ru" ? "\u{1F1F7}\u{1F1FA} Russian" : "\u{1F1EC}\u{1F1E7} English"}`, "langSet"),
-    back: "\u{1F519} Back",
+    langSet: (l) => `Language: ${l === "ru" ? "🇷🇺 Russian" : "🇬🇧 English"}`,
+    back: "🔙 Back",
+    toMenu: "Menu",
+    toProjects: "Projects",
+    siteLabel: "Site",
+    botLabel: "Bot",
+    shotLabel: "Screenshot",
+    privateLabel: "source private",
+    notFound: "Project not found.",
     notOwner: "Only the owner can use this command.",
     notConfigured: "Owner is not configured (OWNER_ID).",
     statsEmpty: "No data yet.",
-    stats: /* @__PURE__ */ __name((s) => `\u{1F4CA} <b>Statistics</b>
+    stats: (s) => `📊 <b>Statistics</b>
 
 Users: <b>${s.users}</b>
 Messages: <b>${s.msgs}</b>
@@ -235,37 +361,43 @@ Top users:
 ${s.topUsers}
 
 Referrals:
-${s.refList}`, "stats"),
+${s.refList}`,
     searchPrompt: "Format: /search <query>\nExample: /search python",
-    searchEmpty: /* @__PURE__ */ __name((q) => `Nothing found for \xAB${q}\xBB.`, "searchEmpty"),
-    searchTitle: /* @__PURE__ */ __name((q) => `<b>Results for \xAB${q}\xBB:</b>`, "searchTitle"),
-    topTitle: "<b>\u{1F3C6} Top projects by stars:</b>",
-    about: "\u{1F464} <b>About me</b>\n\nI build bots, AI tools, Web3 and QA platforms.\nAll projects are open source on GitHub.\n\n\u{1F6E0} Stack: Python, TypeScript, Go, Rust, C++, Solidity\n\u{1F4E6} Projects: 12 repos \u2014 from AI assistants to load testing\n\u{1F4E2} Channels: @b2wmain, @b2wshitpost\n\nButtons below are my links \u{1F447}",
+    searchEmpty: (q) => `Nothing found for «${q}».`,
+    searchTitle: (q) => `<b>Results for «${q}»:</b>`,
+    topTitle: "<b>🏆 Top projects by stars:</b>",
+    about: "👤 <b>About me</b>\n\nI build bots, AI tools, Web3 and QA platforms.\nAll projects are open source on GitHub.\n\n🛠 Stack: Python, TypeScript, Go, Rust, C++, Solidity\n📦 Projects: 20 — sites, bots and engineering tools\n📢 Channels: @b2wmain, @b2wshitpost\n\nButtons below are my links 👇",
     broadcastPrompt: "Format: /broadcast <text>",
-    broadcastDone: /* @__PURE__ */ __name((ok, fail) => `Sent: <b>${ok}</b>, failed: <b>${fail}</b>.`, "broadcastDone"),
+    broadcastDone: (ok, fail) => `Sent: <b>${ok}</b>, failed: <b>${fail}</b>.`,
     broadcastEmpty: "No users to broadcast to."
   }
 };
 var COMMANDS = [
-  { command: "start", description: "\u0417\u0430\u043F\u0443\u0441\u043A" },
-  { command: "projects", description: "\u041F\u0440\u043E\u0435\u043A\u0442\u044B GitHub" },
-  { command: "search", description: "\u041F\u043E\u0438\u0441\u043A \u043F\u0440\u043E\u0435\u043A\u0442\u043E\u0432" },
-  { command: "top", description: "\u0422\u043E\u043F \u043F\u043E \u0437\u0432\u0451\u0437\u0434\u0430\u043C" },
-  { command: "links", description: "\u0412\u0441\u0435 \u0441\u0441\u044B\u043B\u043A\u0438" },
-  { command: "channels", description: "Telegram-\u043A\u0430\u043D\u0430\u043B\u044B" },
-  { command: "about", description: "\u041E\u0431\u043E \u043C\u043D\u0435" },
-  { command: "stats", description: "\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430" },
-  { command: "myid", description: "\u041C\u043E\u0439 ID" },
-  { command: "help", description: "\u0421\u043F\u0440\u0430\u0432\u043A\u0430" }
+  { command: "start", description: "Запуск" },
+  { command: "projects", description: "Проекты GitHub" },
+  { command: "sites", description: "Сайты проектов" },
+  { command: "bots", description: "Telegram-боты" },
+  { command: "search", description: "Поиск проектов" },
+  { command: "top", description: "Топ по звёздам" },
+  { command: "links", description: "Все ссылки" },
+  { command: "channels", description: "Telegram-каналы" },
+  { command: "about", description: "Обо мне" },
+  { command: "stats", description: "Статистика" },
+  { command: "myid", description: "Мой ID" },
+  { command: "help", description: "Справка" }
 ];
 var langCache = /* @__PURE__ */ new Map();
 var starsCache = null;
 var starsFetchedAt = 0;
+function esc(value) {
+  return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
 async function callApi(token, method, payload) {
   const res = await fetch(`${API}/bot${token}/${method}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(payload),
+    signal: AbortSignal.timeout(1e4)
   });
   if (!res.ok) {
     console.error(`Telegram API ${method}: HTTP ${res.status}`);
@@ -278,7 +410,6 @@ async function callApi(token, method, payload) {
   }
   return body.result;
 }
-__name(callApi, "callApi");
 async function sendMessage(token, chatId, text, keyboard) {
   const payload = {
     chat_id: chatId,
@@ -286,12 +417,14 @@ async function sendMessage(token, chatId, text, keyboard) {
     parse_mode: "HTML",
     link_preview_options: { is_disabled: true }
   };
-  if (keyboard) {
-    payload.reply_markup = { inline_keyboard: keyboard };
-  }
+  if (keyboard) payload.reply_markup = { inline_keyboard: keyboard };
   return callApi(token, "sendMessage", payload);
 }
-__name(sendMessage, "sendMessage");
+async function sendPhoto(token, chatId, photo, caption, keyboard) {
+  const payload = { chat_id: chatId, photo, caption, parse_mode: "HTML" };
+  if (keyboard) payload.reply_markup = { inline_keyboard: keyboard };
+  return callApi(token, "sendPhoto", payload);
+}
 async function editMessage(token, chatId, messageId, text, keyboard) {
   const payload = {
     chat_id: chatId,
@@ -300,33 +433,29 @@ async function editMessage(token, chatId, messageId, text, keyboard) {
     parse_mode: "HTML",
     link_preview_options: { is_disabled: true }
   };
-  if (keyboard) {
-    payload.reply_markup = { inline_keyboard: keyboard };
-  }
+  if (keyboard) payload.reply_markup = { inline_keyboard: keyboard };
   return callApi(token, "editMessageText", payload);
 }
-__name(editMessage, "editMessage");
 async function getLang(env, chatId) {
   if (langCache.has(chatId)) return langCache.get(chatId);
   let lang = "ru";
   try {
-    const v = await env.BOT_KV.get(`lang:${chatId}`);
-    if (v === "en") lang = "en";
-  } catch (e) {
-    console.error("getLang error:", e);
+    const value = await env.BOT_KV.get(`lang:${chatId}`);
+    if (value === "en") lang = "en";
+  } catch (error) {
+    console.error("getLang error:", error);
   }
   langCache.set(chatId, lang);
   return lang;
 }
-__name(getLang, "getLang");
 async function getStars(env, ctx) {
   const now = Date.now();
   if (starsCache && now - starsFetchedAt < STARS_TTL * 1e3) return starsCache;
   let cached = null;
   try {
     cached = JSON.parse(await env.BOT_KV.get("stars"));
-  } catch (e) {
-    console.error("getStars KV error:", e);
+  } catch (error) {
+    console.error("getStars KV error:", error);
   }
   if (cached && now - cached.ts < STARS_TTL * 1e3) {
     starsCache = cached.data;
@@ -335,95 +464,153 @@ async function getStars(env, ctx) {
   }
   const result = {};
   await Promise.allSettled(
-    RAW_PROJECTS.map(async (p) => {
+    PROJECTS.filter((project) => !project.private).map(async (project) => {
       try {
-        const r = await fetch(`${GH_API}/${GITHUB_USERNAME}/${p.name}`, {
-          headers: { "User-Agent": "ssrjkk-bot", Accept: "application/vnd.github+json" }
+        const res = await fetch(`${GH_API}/${GITHUB_USERNAME}/${project.name}`, {
+          headers: { "User-Agent": "ssrjkk-bot", Accept: "application/vnd.github+json" },
+          signal: AbortSignal.timeout(8e3)
         });
-        if (r.ok) {
-          const j = await r.json();
-          result[p.name] = { stars: j.stargazers_count ?? 0 };
+        if (res.ok) {
+          const body = await res.json();
+          result[project.name] = { stars: body.stargazers_count ?? 0 };
         }
-      } catch (e) {
-        console.error(`GitHub fetch ${p.name}:`, e);
+      } catch (error) {
+        console.error(`GitHub fetch ${project.name}:`, error);
       }
     })
   );
   starsCache = result;
   starsFetchedAt = now;
-  if (ctx) {
+  if (ctx && typeof ctx.waitUntil === "function") {
     ctx.waitUntil(
       env.BOT_KV.put("stars", JSON.stringify({ ts: now, data: result }), {
         expirationTtl: STARS_TTL
-      }).catch((e) => console.error("stars KV put:", e))
+      }).catch((error) => console.error("stars KV put:", error))
     );
   }
   return result;
 }
-__name(getStars, "getStars");
-function desc(p, lang) {
-  return lang === "en" && p.desc_en ? p.desc_en : p.desc;
+function desc(project, lang) {
+  return lang === "en" && project.desc_en ? project.desc_en : project.desc;
 }
-__name(desc, "desc");
-function projectCard(p, stars, lang) {
-  const s = stars ? stars[p.name] : null;
-  const starCount = s && s.stars > 0 ? ` ${s.stars}*` : "";
-  return `<b>${p.name}</b> [${p.lang}]${starCount}
-  ${desc(p, lang)}
-  <a href="https://github.com/${GITHUB_USERNAME}/${p.name}">GitHub</a>`;
+function projectCard(project, stars, lang) {
+  const star = stars && stars[project.name] ? stars[project.name].stars : 0;
+  const starCount = star > 0 ? ` ${star}★` : "";
+  const links = [];
+  if (project.site) links.push(`<a href="${project.site}">${LANG[lang].siteLabel}</a>`);
+  if (project.repo && !project.private) links.push(`<a href="${project.repo}">GitHub</a>`);
+  if (project.bot) links.push(`<a href="${project.bot}">${LANG[lang].botLabel}</a>`);
+  if (project.private) links.push(LANG[lang].privateLabel);
+  return `<b>${esc(project.title || project.name)}</b> [${esc(project.lang)}]${starCount}
+${esc(desc(project, lang))}
+${links.join(" · ")}`;
 }
-__name(projectCard, "projectCard");
 function sortByStars(projects, stars) {
   return [...projects].sort(
     (a, b) => (stars[b.name] ? stars[b.name].stars : 0) - (stars[a.name] ? stars[a.name].stars : 0)
   );
 }
-__name(sortByStars, "sortByStars");
+function projectDetailKeyboard(lang, project) {
+  const row = [];
+  if (project.site) row.push({ text: `🌐 ${LANG[lang].siteLabel}`, url: project.site });
+  if (project.repo && !project.private) row.push({ text: "GitHub", url: project.repo });
+  if (project.bot) row.push({ text: `🤖 ${LANG[lang].botLabel}`, url: project.bot });
+  const rows = [];
+  if (row.length) rows.push(row);
+  rows.push([
+    { text: LANG[lang].toProjects, callback_data: "page:0" },
+    { text: LANG[lang].toMenu, callback_data: "show:menu" }
+  ]);
+  return rows;
+}
+async function sendProjectDetail(env, ctx, chatId, name, lang) {
+  const project = PROJECTS.find((item) => item.name === name);
+  if (!project) {
+    await sendMessage(env.BOT_TOKEN, chatId, LANG[lang].notFound);
+    return;
+  }
+  const stars = await getStars(env, ctx);
+  const caption = projectCard(project, stars, lang);
+  const keyboard = projectDetailKeyboard(lang, project);
+  if (project.shot) {
+    const sent = await sendPhoto(env.BOT_TOKEN, chatId, project.shot, caption, keyboard);
+    if (sent) return;
+  }
+  const text = project.shot ? `${caption}
+<a href="${project.shot}">${LANG[lang].shotLabel}</a>` : caption;
+  await sendMessage(env.BOT_TOKEN, chatId, text, keyboard);
+}
 async function projectsList(env, ctx, lang, page) {
   const stars = await getStars(env, ctx);
-  const sorted = RAW_PROJECTS;
-  const total = sorted.length;
+  const total = PROJECTS.length;
   const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
   const safe = Math.min(Math.max(page, 0), pages - 1);
   const start = safe * PAGE_SIZE;
-  const lines = sorted.slice(start, start + PAGE_SIZE).map((p) => projectCard(p, stars, lang));
+  const slice = PROJECTS.slice(start, start + PAGE_SIZE);
+  const lines = slice.map((project) => projectCard(project, stars, lang));
+  const rows = slice.map((project) => [
+    {
+      text: `${project.shot ? "📷" : "ℹ️"} ${project.title || project.name}`,
+      callback_data: `p:${project.name}`
+    }
+  ]);
+  const nav = [];
+  if (safe > 0) nav.push({ text: LANG[lang].prev, callback_data: `page:${safe - 1}` });
+  nav.push({ text: LANG[lang].page(safe + 1, pages), callback_data: "noop" });
+  if (safe < pages - 1) nav.push({ text: LANG[lang].next, callback_data: `page:${safe + 1}` });
+  rows.push(nav);
+  rows.push([{ text: LANG[lang].back, callback_data: "show:menu" }]);
   return {
     text: `${LANG[lang].projectsTitle}
 
 ${lines.join("\n\n")}`,
+    keyboard: rows,
     page: safe,
     pages
   };
 }
-__name(projectsList, "projectsList");
 async function startText(env, ctx, lang) {
-  const total = RAW_PROJECTS.length;
   let sum = 0;
   try {
     const stars = await getStars(env, ctx);
-    for (const p of RAW_PROJECTS) sum += (stars[p.name] ? stars[p.name].stars : 0) || 0;
-  } catch (e) {}
-  if (lang === "ru") return `\u{1F44B} \u041F\u0440\u0438\u0432\u0435\u0442! \u042F \u0431\u043E\u0442 ssrjkk.\n\n\u{1F4E6} \u041F\u0440\u043E\u0435\u043A\u0442\u043E\u0432: ${total} \u00B7 \u2B50 \u0417\u0432\u0451\u0437\u0434: ${sum}\n\n\u041A\u043E\u043C\u0430\u043D\u0434\u044B \u0438\u043B\u0438 \u043A\u043D\u043E\u043F\u043A\u0438 \u043D\u0438\u0436\u0435 \u2014 \u043F\u0440\u043E\u0435\u043A\u0442\u044B, \u0442\u043E\u043F, \u043F\u043E\u0438\u0441\u043A, \u0441\u0441\u044B\u043B\u043A\u0438.`;
-  return `\u{1F44B} Hi! I'm ssrjkk bot.\n\n\u{1F4E6} Projects: ${total} \u00B7 \u2B50 Stars: ${sum}\n\nUse commands or the buttons below \u2014 projects, top, search, links.`;
+    for (const project of PROJECTS) sum += (stars[project.name] ? stars[project.name].stars : 0) || 0;
+  } catch {
+  }
+  const sites = PROJECTS.filter((project) => project.site).length;
+  const bots = PROJECTS.filter((project) => project.bot).length;
+  if (lang === "ru") {
+    return `👋 Привет! Я бот ssrjkk.
+
+📦 Проектов: ${PROJECTS.length} · 🌐 Сайтов: ${sites} · 🤖 Ботов: ${bots} · ⭐ Звёзд: ${sum}
+
+Команды и кнопки ниже — проекты, сайты, боты, топ, поиск и ссылки.`;
+  }
+  return `👋 Hi! I'm ssrjkk bot.
+
+📦 Projects: ${PROJECTS.length} · 🌐 Sites: ${sites} · 🤖 Bots: ${bots} · ⭐ Stars: ${sum}
+
+Use commands or the buttons below — projects, sites, bots, top, search and links.`;
 }
-__name(startText, "startText");
 async function topText(env, ctx, lang) {
   const stars = await getStars(env, ctx);
-  const medals = ["\u{1F947}", "\u{1F948}", "\u{1F949}"];
-  const lines = sortByStars(RAW_PROJECTS, stars).slice(0, 3).map((p, i) => {
-    const s = stars[p.name] ? stars[p.name].stars : 0;
-    return `${medals[i]} <b>${p.name}</b> [${p.lang}] \u2014 ${s}*`;
+  const medals = ["🥇", "🥈", "🥉"];
+  const lines = sortByStars(PROJECTS, stars).slice(0, 3).map((project, index) => {
+    const count = stars[project.name] ? stars[project.name].stars : 0;
+    return `${medals[index]} <b>${esc(project.title || project.name)}</b> [${esc(project.lang)}] — ${count}★`;
   });
   return `${LANG[lang].topTitle}
 
 ${lines.join("\n")}`;
 }
-__name(topText, "topText");
 function mainMenu(lang) {
   return [
     [
       { text: LANG[lang].projects, callback_data: "page:0" },
       { text: LANG[lang].top, callback_data: "show:top" }
+    ],
+    [
+      { text: LANG[lang].sites, callback_data: "show:sites" },
+      { text: LANG[lang].bots, callback_data: "show:bots" }
     ],
     [
       { text: LANG[lang].links, callback_data: "show:links" },
@@ -436,122 +623,133 @@ function mainMenu(lang) {
     [{ text: LANG[lang].aboutBtn, callback_data: "show:about" }]
   ];
 }
-__name(mainMenu, "mainMenu");
-function projectsKeyboard(lang, page, pages) {
-  const rows = [];
-  const nav = [];
-  if (page > 0) nav.push({ text: LANG[lang].prev, callback_data: `page:${page - 1}` });
-  nav.push({ text: LANG[lang].page(page + 1, pages), callback_data: "noop" });
-  if (page < pages - 1) nav.push({ text: LANG[lang].next, callback_data: `page:${page + 1}` });
-  rows.push(nav);
-  rows.push([{ text: LANG[lang].back, callback_data: "show:menu" }]);
-  return rows;
-}
-__name(projectsKeyboard, "projectsKeyboard");
 function urlKeyboard(lang, items) {
-  const rows = items.map((i) => [{ text: i.name, url: i.url }]);
+  const rows = items.map((item) => [{ text: item.name, url: item.url }]);
   rows.push([{ text: LANG[lang].back, callback_data: "show:menu" }]);
   return rows;
 }
-__name(urlKeyboard, "urlKeyboard");
 function langKeyboard(lang) {
   return [
     [
-      { text: "\u{1F1F7}\u{1F1FA} \u0420\u0443\u0441\u0441\u043A\u0438\u0439", callback_data: "lang:ru" },
-      { text: "\u{1F1EC}\u{1F1E7} English", callback_data: "lang:en" }
+      { text: "🇷🇺 Русский", callback_data: "lang:ru" },
+      { text: "🇬🇧 English", callback_data: "lang:en" }
     ],
     [{ text: LANG[lang].back, callback_data: "show:menu" }]
   ];
 }
-__name(langKeyboard, "langKeyboard");
 function track(env, ctx, userId, kind, value) {
-  if (!userId) return;
+  if (!userId || !ctx || typeof ctx.waitUntil !== "function") return;
   ctx.waitUntil(
-    env.BOT_DB.prepare("INSERT INTO events (user_id, kind, value) VALUES (?, ?, ?)").bind(userId, kind, value ?? null).run().catch((e) => console.error("track error:", e))
+    env.BOT_DB.prepare("INSERT INTO events (user_id, kind, value) VALUES (?, ?, ?)").bind(userId, kind, value ?? null).run().catch((error) => console.error("track error:", error))
   );
 }
-__name(track, "track");
+async function sendSites(env, ctx, chatId, lang) {
+  const items = PROJECTS.filter((project) => project.site).map((project) => ({
+    name: `${project.title || project.name} — ${new URL(project.site).host}`,
+    url: project.site
+  }));
+  await sendMessage(env.BOT_TOKEN, chatId, LANG[lang].sitesTitle, urlKeyboard(lang, items));
+}
+async function sendBots(env, ctx, chatId, lang) {
+  const items = PROJECTS.filter((project) => project.bot).map((project) => ({
+    name: `${project.title || project.name} — @${new URL(project.bot).pathname.slice(1)}`,
+    url: project.bot
+  }));
+  await sendMessage(env.BOT_TOKEN, chatId, LANG[lang].botsTitle, urlKeyboard(lang, items));
+}
 async function handleMessage(env, ctx, msg) {
   const token = env.BOT_TOKEN;
   const chatId = msg.chat.id;
   const userId = msg.from ? msg.from.id : null;
   const raw = (msg.text || "").trim();
   track(env, ctx, userId, "msg");
-  const cmd = raw.split(/\s+/)[0];
-  if (cmd === "/start" || cmd === "/start@ssrjkk_bot") {
-    const payload = raw.split(/\s+/)[1];
-    const ref = payload ? payload.replace(/^ref=/, "") : null;
+  const [head, ...rest] = raw.split(/\s+/);
+  const cmd = (head || "").split("@")[0].toLowerCase();
+  if (cmd === "/start") {
+    const payload = rest[0];
+    const ref = payload ? payload.replace(/^ref=/, "").slice(0, 64) : null;
     if (ref) track(env, ctx, userId, "ref", ref);
     const lang2 = await getLang(env, chatId);
     await sendMessage(token, chatId, await startText(env, ctx, lang2), mainMenu(lang2));
     return;
   }
   const lang = await getLang(env, chatId);
-  if (cmd === "/projects" || cmd === "/projects@ssrjkk_bot") {
+  if (cmd === "/projects") {
     track(env, ctx, userId, "cmd", "projects");
-    const { text, page, pages } = await projectsList(env, ctx, lang, 0);
-    await sendMessage(token, chatId, text, projectsKeyboard(lang, page, pages));
+    const { text, keyboard } = await projectsList(env, ctx, lang, 0);
+    await sendMessage(token, chatId, text, keyboard);
     return;
   }
-  if (cmd === "/top" || cmd === "/top@ssrjkk_bot") {
+  if (cmd === "/sites") {
+    track(env, ctx, userId, "cmd", "sites");
+    await sendSites(env, ctx, chatId, lang);
+    return;
+  }
+  if (cmd === "/bots") {
+    track(env, ctx, userId, "cmd", "bots");
+    await sendBots(env, ctx, chatId, lang);
+    return;
+  }
+  if (cmd === "/top") {
     track(env, ctx, userId, "cmd", "top");
     await sendMessage(token, chatId, await topText(env, ctx, lang));
     return;
   }
-  if (cmd === "/search" || cmd === "/search@ssrjkk_bot") {
+  if (cmd === "/search") {
     track(env, ctx, userId, "cmd", "search");
-    const q = raw.split(/\s+/).slice(1).join(" ").trim().toLowerCase();
-    if (!q) {
+    const query = rest.join(" ").trim();
+    if (!query) {
       await sendMessage(token, chatId, LANG[lang].searchPrompt);
       return;
     }
+    const needle = query.toLowerCase();
     const stars = await getStars(env, ctx);
     const found = sortByStars(
-      RAW_PROJECTS.filter(
-        (p) => p.name.toLowerCase().includes(q) || (p.lang || "").toLowerCase().includes(q) || (p.desc || "").toLowerCase().includes(q) || (p.desc_en || "").toLowerCase().includes(q)
+      PROJECTS.filter(
+        (project) => project.name.toLowerCase().includes(needle) || (project.title || "").toLowerCase().includes(needle) || (project.lang || "").toLowerCase().includes(needle) || (project.desc || "").toLowerCase().includes(needle) || (project.desc_en || "").toLowerCase().includes(needle)
       ),
       stars
     ).slice(0, 10);
     if (!found.length) {
-      await sendMessage(token, chatId, LANG[lang].searchEmpty(q));
+      await sendMessage(token, chatId, LANG[lang].searchEmpty(esc(query)));
       return;
     }
-    const lines = found.map((p) => projectCard(p, stars, lang));
-    await sendMessage(token, chatId, `${LANG[lang].searchTitle(q)}
+    const lines = found.map((project) => projectCard(project, stars, lang));
+    await sendMessage(token, chatId, `${LANG[lang].searchTitle(esc(query))}
 
 ${lines.join("\n\n")}`);
     return;
   }
-  if (cmd === "/links" || cmd === "/links@ssrjkk_bot") {
+  if (cmd === "/links") {
     track(env, ctx, userId, "cmd", "links");
     await sendMessage(token, chatId, LANG[lang].linksTitle, urlKeyboard(lang, LINKS));
     return;
   }
-  if (cmd === "/channels" || cmd === "/channels@ssrjkk_bot") {
+  if (cmd === "/channels") {
     track(env, ctx, userId, "cmd", "channels");
     await sendMessage(token, chatId, LANG[lang].channelsTitle, urlKeyboard(lang, CHANNELS));
     return;
   }
-  if (cmd === "/about" || cmd === "/about@ssrjkk_bot") {
+  if (cmd === "/about") {
     track(env, ctx, userId, "cmd", "about");
     await sendMessage(token, chatId, LANG[lang].about, urlKeyboard(lang, LINKS));
     return;
   }
-  if (cmd === "/help" || cmd === "/help@ssrjkk_bot") {
+  if (cmd === "/help") {
     track(env, ctx, userId, "cmd", "help");
     await sendMessage(token, chatId, LANG[lang].help);
     return;
   }
-  if (cmd === "/stats" || cmd === "/stats@ssrjkk_bot") {
+  if (cmd === "/stats") {
     track(env, ctx, userId, "cmd", "stats");
     await showStats(env, ctx, chatId, lang);
     return;
   }
-  if (cmd === "/myid" || cmd === "/myid@ssrjkk_bot") {
+  if (cmd === "/myid") {
     await sendMessage(token, chatId, `Your ID: <code>${userId}</code>`);
     return;
   }
-  if (cmd === "/broadcast" || cmd === "/broadcast@ssrjkk_bot") {
+  if (cmd === "/broadcast") {
     track(env, ctx, userId, "cmd", "broadcast");
     await handleBroadcast(env, token, chatId, lang, raw);
     return;
@@ -559,7 +757,6 @@ ${lines.join("\n\n")}`);
   if (cmd.startsWith("/")) track(env, ctx, userId, "cmd", cmd);
   await sendMessage(token, chatId, LANG[lang].unknown + LANG[lang].help);
 }
-__name(handleMessage, "handleMessage");
 async function handleBroadcast(env, token, chatId, lang, raw) {
   const owner = env.OWNER_ID;
   if (!owner) {
@@ -578,24 +775,23 @@ async function handleBroadcast(env, token, chatId, lang, raw) {
   const rows = await env.BOT_DB.prepare(
     "SELECT DISTINCT user_id FROM events WHERE user_id IS NOT NULL"
   ).all();
-  const ids = rows.results.map((r) => r.user_id);
+  const ids = (rows.results || []).map((row) => row.user_id);
   if (!ids.length) {
     await sendMessage(token, chatId, LANG[lang].broadcastEmpty);
     return;
   }
   let ok = 0;
   let fail = 0;
-  for (let i = 0; i < ids.length; i += 10) {
-    const chunk = ids.slice(i, i + 10);
-    const res = await Promise.allSettled(chunk.map((id) => sendMessage(token, id, text)));
-    res.forEach((r) => {
-      if (r.status === "fulfilled" && r.value) ok++;
+  for (let index = 0; index < ids.length; index += 10) {
+    const chunk = ids.slice(index, index + 10);
+    const results = await Promise.allSettled(chunk.map((id) => sendMessage(token, id, text)));
+    results.forEach((result) => {
+      if (result.status === "fulfilled" && result.value) ok++;
       else fail++;
     });
   }
   await sendMessage(token, chatId, LANG[lang].broadcastDone(ok, fail));
 }
-__name(handleBroadcast, "handleBroadcast");
 async function showStats(env, ctx, chatId, lang) {
   const token = env.BOT_TOKEN;
   const owner = env.OWNER_ID;
@@ -625,9 +821,9 @@ async function showStats(env, ctx, chatId, lang) {
   const refRows = await env.BOT_DB.prepare(
     "SELECT value, COUNT(*) c FROM events WHERE kind = 'ref' GROUP BY value ORDER BY c DESC"
   ).all();
-  const cmdList = cmdRows.results.length ? cmdRows.results.map((r) => `  /${r.value} \u2014 ${r.c}`).join("\n") : LANG[lang].statsEmpty;
-  const topUsers = userRows.results.length ? userRows.results.map((r) => `  <code>${r.user_id}</code> \u2014 ${r.c}`).join("\n") : LANG[lang].statsEmpty;
-  const refList = refRows.results.length ? refRows.results.map((r) => `  ${r.value} \u2014 ${r.c}`).join("\n") : LANG[lang].statsEmpty;
+  const cmdList = cmdRows.results.length ? cmdRows.results.map((row) => `  /${esc(row.value)} — ${row.c}`).join("\n") : LANG[lang].statsEmpty;
+  const topUsers = userRows.results.length ? userRows.results.map((row) => `  <code>${esc(row.user_id)}</code> — ${row.c}`).join("\n") : LANG[lang].statsEmpty;
+  const refList = refRows.results.length ? refRows.results.map((row) => `  ${esc(row.value)} — ${row.c}`).join("\n") : LANG[lang].statsEmpty;
   await sendMessage(
     token,
     chatId,
@@ -635,96 +831,143 @@ async function showStats(env, ctx, chatId, lang) {
       users: users ? users.c : 0,
       msgs: msgs ? msgs.c : 0,
       today: today ? today.c : 0,
-      cmds: cmdRows.results.reduce((a, r) => a + r.c, 0),
+      cmds: cmdRows.results.reduce((sum, row) => sum + row.c, 0),
       cmdList,
       topUsers,
       refList
     })
   );
 }
-__name(showStats, "showStats");
-async function handleCallback(env, ctx, cb) {
+async function handleCallback(env, ctx, callback) {
   const token = env.BOT_TOKEN;
-  const chatId = cb.message.chat.id;
-  const messageId = cb.message.message_id;
-  const data = cb.data || "";
+  const chatId = callback.message.chat.id;
+  const messageId = callback.message.message_id;
+  const payload = callback.data || "";
   const lang = await getLang(env, chatId);
-  if (data === "noop") {
-    await callApi(token, "answerCallbackQuery", { callback_query_id: cb.id });
+  if (payload === "noop") {
+    await callApi(token, "answerCallbackQuery", { callback_query_id: callback.id });
     return;
   }
-  if (data.startsWith("page:")) {
-    const { text, page, pages } = await projectsList(env, ctx, lang, parseInt(data.split(":")[1], 10));
-    await editMessage(token, chatId, messageId, text, projectsKeyboard(lang, page, pages));
-    await callApi(token, "answerCallbackQuery", { callback_query_id: cb.id });
+  if (payload.startsWith("page:")) {
+    const { text, keyboard } = await projectsList(
+      env,
+      ctx,
+      lang,
+      parseInt(payload.split(":")[1], 10)
+    );
+    await editMessage(token, chatId, messageId, text, keyboard);
+    await callApi(token, "answerCallbackQuery", { callback_query_id: callback.id });
     return;
   }
-  if (data.startsWith("show:")) {
-    const what = data.split(":")[1];
+  if (payload.startsWith("p:") || payload.startsWith("shot:")) {
+    const name = payload.slice(payload.indexOf(":") + 1);
+    await sendProjectDetail(env, ctx, chatId, name, lang);
+    await callApi(token, "answerCallbackQuery", { callback_query_id: callback.id });
+    return;
+  }
+  if (payload.startsWith("show:")) {
+    const what = payload.split(":")[1];
     let text;
-    let kb;
+    let keyboard;
     if (what === "menu") {
       text = LANG[lang].menu;
-      kb = mainMenu(lang);
+      keyboard = mainMenu(lang);
     } else if (what === "top") {
       text = await topText(env, ctx, lang);
-      kb = [[{ text: LANG[lang].back, callback_data: "show:menu" }]];
+      keyboard = [[{ text: LANG[lang].back, callback_data: "show:menu" }]];
     } else if (what === "links") {
       text = LANG[lang].linksTitle;
-      kb = urlKeyboard(lang, LINKS);
+      keyboard = urlKeyboard(lang, LINKS);
     } else if (what === "channels") {
       text = LANG[lang].channelsTitle;
-      kb = urlKeyboard(lang, CHANNELS);
+      keyboard = urlKeyboard(lang, CHANNELS);
+    } else if (what === "sites") {
+      text = LANG[lang].sitesTitle;
+      keyboard = urlKeyboard(
+        lang,
+        PROJECTS.filter((project) => project.site).map((project) => ({
+          name: `${project.title || project.name} — ${new URL(project.site).host}`,
+          url: project.site
+        }))
+      );
+    } else if (what === "bots") {
+      text = LANG[lang].botsTitle;
+      keyboard = urlKeyboard(
+        lang,
+        PROJECTS.filter((project) => project.bot).map((project) => ({
+          name: `${project.title || project.name} — @${new URL(project.bot).pathname.slice(1)}`,
+          url: project.bot
+        }))
+      );
     } else if (what === "about") {
       text = LANG[lang].about;
-      kb = urlKeyboard(lang, LINKS);
+      keyboard = urlKeyboard(lang, LINKS);
     } else if (what === "help") {
       text = LANG[lang].help;
-      kb = [[{ text: LANG[lang].back, callback_data: "show:menu" }]];
+      keyboard = [[{ text: LANG[lang].back, callback_data: "show:menu" }]];
     } else if (what === "lang") {
       text = LANG[lang].langMenu;
-      kb = langKeyboard(lang);
+      keyboard = langKeyboard(lang);
     } else {
       text = LANG[lang].menu;
-      kb = mainMenu(lang);
+      keyboard = mainMenu(lang);
     }
-    await editMessage(token, chatId, messageId, text, kb);
-    await callApi(token, "answerCallbackQuery", { callback_query_id: cb.id });
+    await editMessage(token, chatId, messageId, text, keyboard);
+    await callApi(token, "answerCallbackQuery", { callback_query_id: callback.id });
     return;
   }
-  if (data.startsWith("lang:")) {
-    const l = data.split(":")[1] === "en" ? "en" : "ru";
-    langCache.set(chatId, l);
-    ctx.waitUntil(env.BOT_KV.put(`lang:${chatId}`, l).catch((e) => console.error("lang put:", e)));
-    await editMessage(token, chatId, messageId, LANG[l].langSet(l), langKeyboard(l));
-    await callApi(token, "answerCallbackQuery", { callback_query_id: cb.id });
-    return;
+  if (payload.startsWith("lang:")) {
+    const next = payload.split(":")[1] === "en" ? "en" : "ru";
+    langCache.set(chatId, next);
+    if (ctx && typeof ctx.waitUntil === "function") {
+      ctx.waitUntil(
+        env.BOT_KV.put(`lang:${chatId}`, next).catch((error) => console.error("lang put:", error))
+      );
+    }
+    await editMessage(token, chatId, messageId, LANG[next].langSet(next), langKeyboard(next));
+    await callApi(token, "answerCallbackQuery", { callback_query_id: callback.id });
   }
 }
-__name(handleCallback, "handleCallback");
 async function handleInline(env, query) {
   const token = env.BOT_TOKEN;
-  const q = (query.query || "").toLowerCase().trim();
+  const needle = (query.query || "").toLowerCase().trim();
   const lang = query.from && query.from.language_code === "en" ? "en" : "ru";
   const stars = await getStars(env, null);
-  const results = RAW_PROJECTS.filter(
-    (p) => !q || p.name.toLowerCase().includes(q) || (p.lang || "").toLowerCase().includes(q) || (p.desc || "").toLowerCase().includes(q) || (p.desc_en || "").toLowerCase().includes(q)
-  ).slice(0, 30).map((p, i) => ({
-    type: "article",
-    id: String(i),
-    title: p.name,
-    description: desc(p, lang).slice(0, 100),
-    reply_markup: {
-      inline_keyboard: [
-        [{ text: "GitHub", url: `https://github.com/${GITHUB_USERNAME}/${p.name}` }]
-      ]
-    },
-    input_message_content: {
-      message_text: projectCard(p, stars, lang),
-      parse_mode: "HTML",
-      link_preview_options: { is_disabled: true }
+  const results = PROJECTS.filter(
+    (project) => !needle || project.name.toLowerCase().includes(needle) || (project.title || "").toLowerCase().includes(needle) || (project.lang || "").toLowerCase().includes(needle) || (project.desc || "").toLowerCase().includes(needle) || (project.desc_en || "").toLowerCase().includes(needle)
+  ).slice(0, 30).map((project, index) => {
+    const buttons = [];
+    if (project.site) buttons.push({ text: `🌐 ${LANG[lang].siteLabel}`, url: project.site });
+    if (project.repo && !project.private) buttons.push({ text: "GitHub", url: project.repo });
+    if (project.bot) buttons.push({ text: `🤖 ${LANG[lang].botLabel}`, url: project.bot });
+    const markup = buttons.length ? { inline_keyboard: [buttons] } : void 0;
+    const card = projectCard(project, stars, lang);
+    if (project.shot) {
+      return {
+        type: "photo",
+        id: String(index),
+        photo_url: project.shot,
+        thumbnail_url: project.shot,
+        title: project.title || project.name,
+        description: desc(project, lang).slice(0, 100),
+        caption: card,
+        parse_mode: "HTML",
+        ...markup ? { reply_markup: markup } : {}
+      };
     }
-  }));
+    return {
+      type: "article",
+      id: String(index),
+      title: project.title || project.name,
+      description: desc(project, lang).slice(0, 100),
+      ...markup ? { reply_markup: markup } : {},
+      input_message_content: {
+        message_text: card,
+        parse_mode: "HTML",
+        link_preview_options: { is_disabled: true }
+      }
+    };
+  });
   await callApi(token, "answerInlineQuery", {
     inline_query_id: query.id,
     results,
@@ -732,7 +975,6 @@ async function handleInline(env, query) {
     is_personal: true
   });
 }
-__name(handleInline, "handleInline");
 async function setupWebhook(env, origin) {
   const webhook = await callApi(env.BOT_TOKEN, "setWebhook", {
     url: `${origin}/webhook`,
@@ -740,17 +982,28 @@ async function setupWebhook(env, origin) {
     allowed_updates: ["message", "callback_query", "inline_query"],
     ...env.WEBHOOK_SECRET ? { secret_token: env.WEBHOOK_SECRET } : {}
   });
-  const commands = await callApi(env.BOT_TOKEN, "setMyCommands", {
-    commands: COMMANDS
-  });
+  const commands = await callApi(env.BOT_TOKEN, "setMyCommands", { commands: COMMANDS });
   return { webhook, commands };
 }
-__name(setupWebhook, "setupWebhook");
 var worker_default = {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (url.pathname === "/health") {
       return new Response("OK", { status: 200 });
+    }
+    if (url.pathname === "/") {
+      return new Response(
+        JSON.stringify({
+          name: "ssrjkk-bot",
+          bot: "https://t.me/ssrjkk_bot",
+          github: `https://github.com/${GITHUB_USERNAME}`,
+          hub: projects_default.hub,
+          projects: PROJECTS.length,
+          sites: PROJECTS.filter((project) => project.site).length,
+          bots: PROJECTS.filter((project) => project.bot).length
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } }
+      );
     }
     if (url.pathname === "/setup") {
       if (!env.SETUP_KEY || url.searchParams.get("key") !== env.SETUP_KEY) {
@@ -783,8 +1036,8 @@ var worker_default = {
       } else if (update.inline_query) {
         await handleInline(env, update.inline_query);
       }
-    } catch (e) {
-      console.error("Webhook error:", e);
+    } catch (error) {
+      console.error("Webhook error:", error);
       return new Response("Error", { status: 500 });
     }
     return new Response("OK", { status: 200 });

@@ -1,114 +1,245 @@
 {
   "github": "ssrjkk",
+  "hub": "https://ssrjkk.github.io/",
   "projects": [
     {
-      "name": "shroud",
-      "lang": "Rust, Solidity, TS",
+      "name": "shopwatch",
+      "title": "Watchop",
+      "lang": "JavaScript, Node.js",
       "stars": 0,
-      "desc": "Приватный программируемый ML над шифрованными данными: fhEVM-контракты, FHE-обучение поверх шифртекста, ZK-доказательство вычислений, стриминговые выплаты.\nСтек: Solidity, TypeScript SDK, Rust-нода",
-      "desc_en": "Private, programmable ML on encrypted data: fhEVM contracts, FHE training over ciphertext, ZK proof of compute, streaming payouts.\nStack: Solidity, TypeScript SDK, Rust node"
-    },
-    {
-      "name": "tippy-on-base",
-      "lang": "Python",
-      "stars": 0,
-      "desc": "Tip-бот на Base: превращает любой Telegram-чат в on-chain экономику сообщества — мгновенные USDC-переводы, реакции, страницы донатов, пейволы и предсказательные рынки. Нулевой газ для пользователей.\nСтек: Python, Ethereum/Base",
-      "desc_en": "Tip bot on Base: turns any Telegram chat into an on-chain community economy — instant USDC transfers, reactions, donation pages, paywalls and prediction markets. Zero gas for users.\nStack: Python, Ethereum/Base"
-    },
-    {
-      "name": "wake",
-      "lang": "Python, TS",
-      "stars": 0,
-      "desc": "Мультивендорный торговый терминал: перп-рынки Lighter + Arcus, copy trading, Predict, AI-агент. Фронтенд React + Vite + Tailwind, бэкенд FastAPI.\nСтек: Python, TypeScript, React, FastAPI, wagmi/viem",
-      "desc_en": "Multi-venue trading terminal: Lighter + Arcus perp markets, copy trading, Predict, AI agent. React + Vite + Tailwind frontend, FastAPI backend.\nStack: Python, TypeScript, React, FastAPI, wagmi/viem"
-    },
-    {
-      "name": "raven",
-      "lang": "Python, TS, Go, Rust",
-      "stars": 3,
-      "desc": "Self-hosted MCP-сервер: 66 инструментов поверх stdio и HTTP. Изоляция воркспейса, авторизация по ключам, MIT-лицензия.\nСтек: Python, TypeScript, Go, Rust, Ollama, PostgreSQL",
-      "desc_en": "Self-hosted MCP server: 66 tools over stdio and HTTP. Workspace confinement, keyed auth, MIT licensed.\nStack: Python, TypeScript, Go, Rust, Ollama, PostgreSQL"
-    },
-    {
-      "name": "agent-skills",
-      "lang": "Python",
-      "stars": 1,
-      "desc": "100 курируемых двуязычных (EN/RU) навыков в универсальном формате Agent Skills для Claude Code, OpenCode, Cursor, Windsurf и любых LLM/GLM-агентов + Python SDK/CLI с CI-валидацией.\nСтек: Python, Agent Skills, SDK/CLI",
-      "desc_en": "100 curated bilingual (EN/RU) skills in the universal Agent Skills format for Claude Code, OpenCode, Cursor, Windsurf and every LLM/GLM agent + Python SDK/CLI with CI-enforced validation.\nStack: Python, Agent Skills, SDK/CLI"
-    },
-    {
-      "name": "drafter",
-      "lang": "TypeScript",
-      "stars": 1,
-      "desc": "Браузерный AI QA-ассистент с agentic-анализом кодовой базы. Генерирует тест-планы, тест-кейсы, код автотестов и баг-репорты.\nСтек: TypeScript",
-      "desc_en": "Browser-based AI QA assistant with agentic codebase analysis. Generates test plans, test cases, automation code, and bug reports.\nStack: TypeScript"
-    },
-    {
-      "name": "noema",
-      "lang": "Python",
-      "stars": 0,
-      "desc": "Нейро-символический инженерный движок: генерирует технические решения, формально верифицирует их через Z3, аудирует каждый шаг и сам чинит инциденты через pull-реквесты.\nСтек: Python, Z3, gRPC",
-      "desc_en": "Neuro-symbolic engineering mind: generates technical solutions, formally verifies them with Z3, audits every thought step, and autonomously fixes its own incidents via pull requests.\nStack: Python, Z3, gRPC"
-    },
-    {
-      "name": "volley",
-      "lang": "C++",
-      "stars": 0,
-      "desc": "Платформа нагрузочного тестирования HTTP-сервисов. Асинхронное ядро C++20 (Boost.Beast/ASIO), YAML-сценарии, OAuth2/Vault/mTLS, OTLP+Prometheus, Python SDK, gRPC control plane.\nСтек: C++20, Boost.Beast, OTLP, Prometheus, Kubernetes",
-      "desc_en": "Load-testing platform for HTTP services. C++20 async core (Boost.Beast/ASIO), YAML scenarios, OAuth2/Vault/mTLS, OTLP+Prometheus, Python SDK, gRPC control plane.\nStack: C++20, Boost.Beast, OTLP, Prometheus, Kubernetes"
-    },
-    {
-      "name": "qualix",
-      "lang": "Python",
-      "stars": 0,
-      "desc": "QA-платформа автоматизации — 317 тестов, 100% покрытие, security hardening, готовность к k8s. FastAPI + pytest + Playwright + Locust.\nСтек: Python, FastAPI, Pytest, Playwright, Locust, Kubernetes",
-      "desc_en": "QA automation platform — 317 tests, 100% coverage, security hardening, k8s-ready. FastAPI + pytest + Playwright + Locust.\nStack: Python, FastAPI, Pytest, Playwright, Locust, Kubernetes"
-    },
-    {
-      "name": "qa-arsenal",
-      "lang": "Python",
-      "stars": 0,
-      "desc": "Единый QA-монорепозиторий: 5 наборов тестов из 5 репозиториев (hh.ru api+ui, guap.ru python+go, amoCRM). API/UI/load/DB/Kafka тесты — Python/pytest, Playwright, Go.\nСтек: Python, pytest, Playwright, Go, Kafka",
-      "desc_en": "Unified QA monorepo: 5 target suites consolidated from 5 repos (hh.ru api+ui, guap.ru python+go, amoCRM). API/UI/load/DB/Kafka tests — Python/pytest, Playwright, Go.\nStack: Python, pytest, Playwright, Go, Kafka"
-    },
-    {
-      "name": "mobius",
-      "lang": "Python",
-      "stars": 0,
-      "desc": "Автоматизация мобильных тестов Android/iOS: Appium 2.x + pytest, screen objects, пул устройств, параллельный запуск. 947 тестов, 99% покрытие.\nСтек: Python, Appium 2.x, pytest",
-      "desc_en": "Mobile test automation for Android and iOS: Appium 2.x + pytest, screen objects, device pooling, parallel execution. 947 tests, 99% coverage.\nStack: Python, Appium 2.x, pytest"
+      "desc": "Магазин часов Watchop: 313 моделей и 346 SKU, каталог, фильтры, корзина и оформление. Заказ уходит из deep link в Telegram- или MAX-бота.\nСтек: JavaScript, Node.js, Telegram/MAX bots",
+      "desc_en": "Watchop store: 313 models and 346 SKUs, catalog, filters, cart and checkout. Orders go from a deep link into a Telegram or MAX bot.\nStack: JavaScript, Node.js, Telegram/MAX bots",
+      "repo": "https://github.com/ssrjkk/shopwatch",
+      "site": "https://ssrjkk.github.io/shopwatch/",
+      "bot": "https://t.me/wwwatchshop_bot",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/shopwatch.jpg"
     },
     {
       "name": "bothive",
+      "title": "Bothive",
       "lang": "TypeScript",
       "stars": 0,
-      "desc": "Платформа оркестрации нескольких ботов для Telegram, Twitch, YouTube и Twitter.\nСтек: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry",
-      "desc_en": "Multi-bot orchestration platform for Telegram, Twitch, YouTube and Twitter.\nStack: TypeScript, Node.js, React, BullMQ, Prisma, OpenTelemetry"
+      "desc": "Self-hosted оркестрация ботов на восемь платформ: очереди BullMQ, движок скриптов в песочнице, webhooks и метрики Prometheus.\nСтек: TypeScript, Fastify, React, Redis, PostgreSQL",
+      "desc_en": "Self-hosted bot orchestration for eight platforms: BullMQ queues, sandboxed script engine, webhooks and Prometheus metrics.\nStack: TypeScript, Fastify, React, Redis, PostgreSQL",
+      "repo": "https://github.com/ssrjkk/bothive",
+      "site": "https://ssrjkk.github.io/bothive/",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/bothive.jpg"
+    },
+    {
+      "name": "raven",
+      "title": "Raven",
+      "lang": "Python, TS, Go, Rust",
+      "stars": 3,
+      "desc": "Self-hosted MCP-сервер: 66 инструментов поверх stdio и HTTP, изоляция воркспейса, авторизация по ключам, MIT.\nСтек: Python, FastAPI, MCP, Rust/Go",
+      "desc_en": "Self-hosted MCP server: 66 tools over stdio and HTTP, workspace confinement, keyed auth, MIT licensed.\nStack: Python, FastAPI, MCP, Rust/Go",
+      "repo": "https://github.com/ssrjkk/raven",
+      "site": "https://ssrjkk.github.io/raven/",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/raven.jpg"
+    },
+    {
+      "name": "wake",
+      "title": "Wake",
+      "lang": "Python, TS",
+      "stars": 0,
+      "desc": "Мультивендорный торговый терминал: перп-рынки Lighter и Arcus, funding, copy trading, Predict и AI-агент. Фронтенд React, бэкенд FastAPI.\nСтек: React, FastAPI, PostgreSQL, Telegram bot",
+      "desc_en": "Multi-venue trading terminal: Lighter and Arcus perp markets, funding, copy trading, Predict and an AI agent. React frontend, FastAPI backend.\nStack: React, FastAPI, PostgreSQL, Telegram bot",
+      "repo": "https://github.com/ssrjkk/wake",
+      "site": "https://wake-7k6.pages.dev",
+      "bot": "https://t.me/waketrade_bot",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/wake.jpg"
+    },
+    {
+      "name": "tippy-on-base",
+      "title": "Tippy",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "USDC-экономика в Telegram: чаевые, донат-страницы, рынки предсказаний на LMSR и Mini App на Base. Нулевой газ для пользователей.\nСтек: Python, aiogram, Base/USDC, Mini App",
+      "desc_en": "USDC economy in Telegram: tips, donation pages, LMSR prediction markets and a Mini App on Base. Zero gas for users.\nStack: Python, aiogram, Base/USDC, Mini App",
+      "repo": "https://github.com/ssrjkk/tippy-on-base",
+      "site": "https://tippy-egi.pages.dev",
+      "bot": "https://t.me/tippy_on_base_bot",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/tippy.jpg"
+    },
+    {
+      "name": "drafter",
+      "title": "Drafter",
+      "lang": "TypeScript",
+      "stars": 1,
+      "desc": "Браузерный AI QA-ассистент: тест-планы, кейсы, код автотестов и баг-репорты из описания задачи. Девять провайдеров, свой ключ.\nСтек: TypeScript, React, LLM providers",
+      "desc_en": "Browser-based AI QA assistant: test plans, cases, automation code and bug reports from a task description. Nine providers, bring your own key.\nStack: TypeScript, React, LLM providers",
+      "repo": "https://github.com/ssrjkk/drafter",
+      "site": "https://ssrjkk.github.io/drafter/",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/drafter.jpg"
     },
     {
       "name": "ezzoffer",
+      "title": "EZOffer",
       "lang": "TypeScript",
       "stars": 0,
-      "desc": "AI-автоотклик на hh.ru: подбор вакансий, сопроводительные письма, управление резюме и Telegram-уведомления.\nСтек: TypeScript, Next.js, React",
-      "desc_en": "AI-powered job search automation for hh.ru: vacancy matching, cover letters, resume management and Telegram notifications.\nStack: TypeScript, Next.js, React"
+      "desc": "Автоматизация поиска работы на hh.ru: подбор вакансий, сопроводительные письма, управление резюме и уведомления в Telegram.\nСтек: TypeScript, Next.js, hh.ru API",
+      "desc_en": "Job search automation for hh.ru: vacancy matching, cover letters, resume management and Telegram notifications.\nStack: TypeScript, Next.js, hh.ru API",
+      "repo": "https://github.com/ssrjkk/ezzoffer",
+      "site": "https://ssrjkk.github.io/ezzoffer/",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/ezzoffer.jpg"
     },
     {
       "name": "harvest",
+      "title": "Harvest",
       "lang": "Python",
       "stars": 0,
-      "desc": "Фермер EVM-тестнетов: автоматический фарм активностей, мультикошельки, операторский портал с live-лентой, планировщик и Telegram-бот.\nСтек: Python",
-      "desc_en": "EVM testnet farmer: automated activity farming, multi-wallet support, operator portal with live feed, scheduler and Telegram bot.\nStack: Python"
+      "desc": "QA-стенд для EVM-тестнетов: флот кошельков, сценарии, здоровье сети и отчёты прогонов. Только тестовые сети, плюс Telegram-бот оператора.\nСтек: Python, EVM testnets, Telegram bot",
+      "desc_en": "QA stand for EVM testnets: wallet fleet, scenarios, network health and run reports. Testnets only, plus an operator Telegram bot.\nStack: Python, EVM testnets, Telegram bot",
+      "repo": "https://github.com/ssrjkk/harvest",
+      "site": "https://ssrjkk.github.io/harvest/",
+      "bot": "https://t.me/harvest_testnet_bot",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/harvest.jpg"
+    },
+    {
+      "name": "shroud",
+      "title": "Shroud",
+      "lang": "Rust, Solidity, TS",
+      "stars": 0,
+      "desc": "Исследовательский прототип обучения ML на шифрованных данных: fhEVM-контракты, STARK-доказательство вычислений, стриминговые выплаты. Не аудирован.\nСтек: Solidity, TypeScript, Rust, fhEVM",
+      "desc_en": "Research prototype for ML training over encrypted data: fhEVM contracts, STARK proof of compute, streaming payouts. Not audited.\nStack: Solidity, TypeScript, Rust, fhEVM",
+      "repo": "https://github.com/ssrjkk/shroud",
+      "site": "https://ssrjkk.github.io/shroud/",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/shroud.jpg"
+    },
+    {
+      "name": "agent-skills",
+      "title": "Agent Skills",
+      "lang": "Python",
+      "stars": 2,
+      "desc": "100+ курируемых двуязычных навыков (EN/RU) в формате Agent Skills для Claude Code, OpenCode, Cursor и Windsurf, плюс Python SDK и CLI с CI-валидацией.\nСтек: Python, Agent Skills, SDK/CLI",
+      "desc_en": "100+ curated bilingual (EN/RU) skills in the Agent Skills format for Claude Code, OpenCode, Cursor and Windsurf, plus a Python SDK and CLI with CI-enforced validation.\nStack: Python, Agent Skills, SDK/CLI",
+      "repo": "https://github.com/ssrjkk/agent-skills",
+      "site": "https://ssrjkk.github.io/agent-skills/",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/agent-skills.jpg"
+    },
+    {
+      "name": "qualix",
+      "title": "Qualix",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "QA-платформа автоматизации: 317 тестов на шести уровнях, покрытие 85%+, security hardening, готовность к k8s.\nСтек: Python, FastAPI, pytest, Playwright, Locust",
+      "desc_en": "QA automation platform: 317 tests across six layers, 85%+ coverage, security hardening, k8s-ready.\nStack: Python, FastAPI, pytest, Playwright, Locust",
+      "repo": "https://github.com/ssrjkk/qualix"
+    },
+    {
+      "name": "qa-arsenal",
+      "title": "QA Arsenal",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "QA-монорепозиторий: hh.ru API/UI, guap.ru Python/Go и amoCRM. API, UI, нагрузочные, БД- и Kafka-наборы в одном пайплайне.\nСтек: Python, pytest, Playwright, Go, Kafka",
+      "desc_en": "QA monorepo: hh.ru API/UI, guap.ru Python/Go and amoCRM. API, UI, load, DB and Kafka suites in one pipeline.\nStack: Python, pytest, Playwright, Go, Kafka",
+      "repo": "https://github.com/ssrjkk/qa-arsenal"
+    },
+    {
+      "name": "mobius",
+      "title": "Mobius",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Мобильная автоматизация Android и iOS: Appium 2.x + pytest, screen objects, пул устройств, параллельный запуск. 947 тестов, 99% покрытия.\nСтек: Python, Appium 2.x, pytest",
+      "desc_en": "Mobile automation for Android and iOS: Appium 2.x + pytest, screen objects, device pooling, parallel runs. 947 tests, 99% coverage.\nStack: Python, Appium 2.x, pytest",
+      "repo": "https://github.com/ssrjkk/mobius"
+    },
+    {
+      "name": "noema",
+      "title": "Noema",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Нейро-символический инженерный движок: LLM предлагает решения, Z3 проверяет по контрактам, инциденты чинятся через pull-реквесты.\nСтек: Python, Z3, gRPC",
+      "desc_en": "Neuro-symbolic engineering engine: an LLM proposes solutions, Z3 verifies them against contracts, incidents are fixed through pull requests.\nStack: Python, Z3, gRPC",
+      "repo": "https://github.com/ssrjkk/noema"
+    },
+    {
+      "name": "volley",
+      "title": "Volley",
+      "lang": "C++",
+      "stars": 0,
+      "desc": "Платформа нагрузочного тестирования HTTP: асинхронное ядро C++20, YAML-сценарии, OAuth2/mTLS/Vault, OTLP и Prometheus, Python SDK.\nСтек: C++20, Boost.Beast, gRPC",
+      "desc_en": "HTTP load-testing platform: C++20 async core, YAML scenarios, OAuth2/mTLS/Vault, OTLP and Prometheus, Python SDK.\nStack: C++20, Boost.Beast, gRPC",
+      "repo": "https://github.com/ssrjkk/volley"
+    },
+    {
+      "name": "port",
+      "title": "Port",
+      "lang": "JavaScript",
+      "stars": 0,
+      "desc": "Этот бот: каталог проектов в Telegram на Cloudflare Workers, D1 и KV. Два языка, карточки со скриншотами, статистика владельца и рассылка.\nСтек: JavaScript, Cloudflare Workers, D1, KV",
+      "desc_en": "This bot: a Telegram project catalogue on Cloudflare Workers, D1 and KV. Two languages, cards with screenshots, owner stats and broadcast.\nStack: JavaScript, Cloudflare Workers, D1, KV",
+      "repo": "https://github.com/ssrjkk/port",
+      "bot": "https://t.me/ssrjkk_bot",
+      "private": true
+    },
+    {
+      "name": "b2w-crypto-tg-bot",
+      "title": "B2W Crypto",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Telegram-платформа для криптопортфеля: отслеживание цен, мониторинг рынка и алерты.\nСтек: Python, aiogram, PostgreSQL",
+      "desc_en": "Telegram crypto platform: portfolio tracking, price monitoring and market alerts.\nStack: Python, aiogram, PostgreSQL",
+      "repo": "https://github.com/ssrjkk/b2w-crypto-tg-bot",
+      "private": true
+    },
+    {
+      "name": "tt_bot",
+      "title": "TT Bot",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Telegram-бот для университетских лабораторных: сдача работ, отчёты и оценивание.\nСтек: Python, aiogram",
+      "desc_en": "Telegram bot for university labs: submissions, reports and grading.\nStack: Python, aiogram",
+      "repo": "https://github.com/ssrjkk/tt_bot",
+      "private": true
+    },
+    {
+      "name": "twinby-swipe-bot",
+      "title": "Twinby",
+      "lang": "Python",
+      "stars": 0,
+      "desc": "Telegram-бот со свайпами для поиска контента и автоматизацией Android/iOS/macOS.\nСтек: Python, Telegram",
+      "desc_en": "Telegram swipe bot for content discovery with Android/iOS/macOS automation.\nStack: Python, Telegram",
+      "repo": "https://github.com/ssrjkk/twinby-swipe-bot",
+      "private": true
+    },
+    {
+      "name": "ssrjkk.github.io",
+      "title": "Projects hub",
+      "lang": "HTML, CSS",
+      "stars": 0,
+      "desc": "Хаб проектов и услуг: живые интерфейсы, ссылки на сайты и ботов, контакты.\nСтек: HTML, CSS, GitHub Pages",
+      "desc_en": "Project and services hub: live interfaces, links to sites and bots, contacts.\nStack: HTML, CSS, GitHub Pages",
+      "repo": "https://github.com/ssrjkk/ssrjkk.github.io",
+      "site": "https://ssrjkk.github.io/",
+      "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/hub.jpg"
     }
   ],
   "channels": [
-    { "name": "B2W Main", "url": "https://t.me/b2wmain" },
-    { "name": "B2W Shitpost", "url": "https://t.me/b2wshitpost" }
+    {
+      "name": "B2W Main",
+      "url": "https://t.me/b2wmain"
+    },
+    {
+      "name": "B2W Shitpost",
+      "url": "https://t.me/b2wshitpost"
+    }
   ],
   "links": [
-    { "name": "GitHub", "url": "https://github.com/ssrjkk" },
-    { "name": "Telegram", "url": "https://t.me/ssrjkk" },
-    { "name": "Tippy on Base", "url": "https://t.me/tippy_on_base_bot" },
-    { "name": "Wake Trade", "url": "https://t.me/waketrade_bot" },
-    { "name": "Harvest Testnet", "url": "https://t.me/harvest_testnet_bot" }
+    {
+      "name": "GitHub",
+      "url": "https://github.com/ssrjkk"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://t.me/ssrjkk"
+    },
+    {
+      "name": "Projects hub",
+      "url": "https://ssrjkk.github.io/"
+    },
+    {
+      "name": "Bot catalogue",
+      "url": "https://t.me/ssrjkk_bot"
+    }
   ]
 }

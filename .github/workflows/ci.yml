@@ -25,12 +25,24 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 24
+          cache: npm
 
-      # Воркер лежит в репозитории собранным, а данные (projects.json) — рядом,
-      # отдельным файлом. Ничто не мешает им разойтись, и расхождение видно
-      # только пользователям бота.
+      - name: Установка зависимостей
+        run: npm ci
+
+      # Деплоится собранный бандл. Если исходник или projects.json изменили,
+      # а бандл не пересобрали, пользователи бота увидят старые данные.
+      - name: Сборка
+        run: npm run build
+
+      - name: Бандл пересобран из исходника
+        run: git diff --exit-code cloudflare-worker/worker.js
+
       - name: Синтаксис воркера
         run: node --check cloudflare-worker/worker.js
 
-      - name: Данные и бандл не разошлись
+      - name: Данные, ссылки и бандл согласованы
         run: node scripts/check-bundle.mjs
+
+      - name: Тесты воркера
+        run: npm test
