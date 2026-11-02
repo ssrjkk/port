@@ -7,8 +7,8 @@
       "title": "Watchop",
       "lang": "JavaScript, Node.js",
       "stars": 0,
-      "desc": "Магазин часов Watchop: 346 моделей, каталог с поиском, фильтры, корзина и оформление. Заказ уходит из deep link в Telegram- или MAX-бота.\nСтек: JavaScript, Node.js, Telegram/MAX bots",
-      "desc_en": "Watchop store: 346 products, searchable catalog, filters, cart and checkout. Orders go from a deep link into a Telegram or MAX bot.\nStack: JavaScript, Node.js, Telegram/MAX bots",
+      "desc": "Магазин часов Watchop: 347 моделей, каталог с поиском, фильтры, корзина и оформление. Заказ уходит из deep link в Telegram- или MAX-бота.\nСтек: JavaScript, Node.js, Telegram/MAX bots",
+      "desc_en": "Watchop store: 347 products, searchable catalog, filters, cart and checkout. Orders go from a deep link into a Telegram or MAX bot.\nStack: JavaScript, Node.js, Telegram/MAX bots",
       "repo": "https://github.com/ssrjkk/shopwatch",
       "site": "https://ssrjkk.github.io/shopwatch/",
       "bot": "https://t.me/wwwatchshop_bot",
@@ -56,7 +56,6 @@
       "desc": "USDC-экономика в Telegram: чаевые, донат-страницы, рынки предсказаний на LMSR и Mini App на Base. Нулевой газ для пользователей.\nСтек: Python, aiogram, Base/USDC, Mini App",
       "desc_en": "USDC economy in Telegram: tips, donation pages, LMSR prediction markets and a Mini App on Base. Zero gas for users.\nStack: Python, aiogram, Base/USDC, Mini App",
       "repo": "https://github.com/ssrjkk/tippy-on-base",
-      "site": "https://tippy-egi.pages.dev",
       "bot": "https://t.me/tippy_on_base_bot",
       "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/tippy.jpg"
     },

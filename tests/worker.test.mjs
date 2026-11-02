@@ -152,7 +152,7 @@ test("root endpoint reports the catalogue size", async () => {
   const body = await response.json();
   assert.equal(body.name, "ssrjkk-bot");
   assert.equal(body.projects, 20);
-  assert.equal(body.sites, 11);
+  assert.equal(body.sites, 10);
   assert.equal(body.bots, 5);
   assert.equal(body.github, "https://github.com/ssrjkk");
 });
@@ -181,7 +181,7 @@ test("/start shows the menu with sites and bots", async () => {
 
   const text = lastText(calls);
   assert.match(text, /Проектов: 20/);
-  assert.match(text, /Сайтов: 11/);
+  assert.match(text, /Сайтов: 10/);
   assert.match(text, /Ботов: 5/);
 
   const button = callsOf(calls, "sendMessage").at(-1);
@@ -216,7 +216,7 @@ test("/sites lists every project site as a URL button", async () => {
   const sent = callsOf(calls, "sendMessage").at(-1);
   assert.match(sent.body.text, /Сайты проектов/);
   const urls = keyboardData(sent).filter((value) => value.startsWith("https://"));
-  assert.equal(urls.length, 11);
+  assert.equal(urls.length, 10);
   assert.ok(urls.includes("https://ssrjkk.github.io/shopwatch/"));
   assert.ok(urls.includes("https://wake-7k6.pages.dev"));
 });
