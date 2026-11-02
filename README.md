@@ -78,7 +78,7 @@ Node 20 or newer.
 ```bash
 npm ci
 npm run build     # src/worker.js + projects.json -> cloudflare-worker/worker.js
-npm test          # 17 tests against the built bundle, Telegram and GitHub are mocked
+npm test          # 18 tests against the built bundle, Telegram and GitHub are mocked
 ```
 
 The worker expects four secrets, set with `wrangler secret put` and never committed:
