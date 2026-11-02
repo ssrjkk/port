@@ -109,8 +109,8 @@
       "title": "Agent Skills",
       "lang": "Python",
       "stars": 2,
-      "desc": "100+ курируемых двуязычных навыков (EN/RU) в формате Agent Skills для Claude Code, OpenCode, Cursor и Windsurf, плюс Python SDK и CLI с CI-валидацией.\nСтек: Python, Agent Skills, SDK/CLI",
-      "desc_en": "100+ curated bilingual (EN/RU) skills in the Agent Skills format for Claude Code, OpenCode, Cursor and Windsurf, plus a Python SDK and CLI with CI-enforced validation.\nStack: Python, Agent Skills, SDK/CLI",
+      "desc": "103 курируемых двуязычных навыка (EN/RU) в формате Agent Skills для Claude Code, OpenCode, Cursor и Windsurf, плюс Python SDK и CLI с CI-валидацией.\nСтек: Python, Agent Skills, SDK/CLI",
+      "desc_en": "103 curated bilingual (EN/RU) skills in the Agent Skills format for Claude Code, OpenCode, Cursor and Windsurf, plus a Python SDK and CLI with CI-enforced validation.\nStack: Python, Agent Skills, SDK/CLI",
       "repo": "https://github.com/ssrjkk/agent-skills",
       "site": "https://ssrjkk.github.io/agent-skills/",
       "shot": "https://raw.githubusercontent.com/ssrjkk/ssrjkk/main/assets/shots/agent-skills.jpg"
