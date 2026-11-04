@@ -240,7 +240,7 @@ test("project detail sends the screenshot with site, repo and bot buttons", asyn
   const photos = callsOf(calls, "sendPhoto");
   assert.equal(photos.length, 1);
   assert.match(photos[0].body.photo, /raw\.githubusercontent\.com\/ssrjkk\/ssrjkk\/main\/assets\/shots\/shopwatch\.jpg/);
-  assert.match(photos[0].body.caption, /Watchop/);
+  assert.match(photos[0].body.caption, /Vektor/);
 
   const buttons = photos[0].body.reply_markup.inline_keyboard.flat();
   const urls = buttons.map((button) => button.url).filter(Boolean);

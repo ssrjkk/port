@@ -4,7 +4,7 @@
   "projects": [
     {
       "name": "shopwatch",
-      "title": "Watchop",
+      "title": "Vektor",
       "lang": "JavaScript, Node.js",
       "stars": 0,
       "desc": "Часовой магазин «Вектор»: 391 модель, каталог с поиском, фильтры, корзина и оформление. Заказ уходит из deep link в Telegram- или MAX-бота. Каталог выгружается в WooCommerce, OpenCart и PrestaShop.\nСтек: JavaScript, Node.js, Telegram/MAX bots",
