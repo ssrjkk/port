@@ -274,6 +274,7 @@ export function projectCard(project, stars, lang) {
   if (project.site) links.push(`<a href="${project.site}">${LANG[lang].siteLabel}</a>`);
   if (project.repo && !project.private) links.push(`<a href="${project.repo}">GitHub</a>`);
   if (project.bot) links.push(`<a href="${project.bot}">${LANG[lang].botLabel}</a>`);
+  for (const link of project.links || []) links.push(`<a href="${esc(link.url)}">${esc(link.name)}</a>`);
   if (project.private) links.push(LANG[lang].privateLabel);
   return `<b>${esc(project.title || project.name)}</b> [${esc(project.lang)}]${starCount}\n${esc(desc(project, lang))}\n${links.join(" · ")}`;
 }
@@ -292,6 +293,7 @@ export function projectDetailKeyboard(lang, project) {
   if (project.bot) row.push({ text: `🤖 ${LANG[lang].botLabel}`, url: project.bot });
   const rows = [];
   if (row.length) rows.push(row);
+  if (project.links?.length) rows.push(project.links.map((link) => ({ text: link.name, url: link.url })));
   rows.push([
     { text: LANG[lang].toProjects, callback_data: "page:0" },
     { text: LANG[lang].toMenu, callback_data: "show:menu" }
@@ -753,7 +755,10 @@ async function handleInline(env, query) {
       if (project.site) buttons.push({ text: `🌐 ${LANG[lang].siteLabel}`, url: project.site });
       if (project.repo && !project.private) buttons.push({ text: "GitHub", url: project.repo });
       if (project.bot) buttons.push({ text: `🤖 ${LANG[lang].botLabel}`, url: project.bot });
-      const markup = buttons.length ? { inline_keyboard: [buttons] } : undefined;
+      const rows = [];
+      if (buttons.length) rows.push(buttons);
+      if (project.links?.length) rows.push(project.links.map((link) => ({ text: link.name, url: link.url })));
+      const markup = rows.length ? { inline_keyboard: rows } : undefined;
       const card = projectCard(project, stars, lang);
       if (project.shot) {
         return {

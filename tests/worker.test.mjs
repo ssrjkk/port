@@ -314,6 +314,32 @@ test("the live catalogue publishes a repository link for every project", () => {
   }
 });
 
+test("project cards and keyboards include documentation links", () => {
+  const catalogue = JSON.parse(readFileSync(new URL("../projects.json", import.meta.url), "utf8"));
+  const project = catalogue.projects.find((entry) => entry.name === "agent-skills");
+  assert.equal(project.links.length, 3);
+  for (const lang of ["ru", "en"]) {
+    const card = projectCard(project, {}, lang);
+    for (const link of project.links) {
+      assert.ok(card.includes(`<a href="${link.url}">${link.name}</a>`));
+    }
+    assert.deepEqual(
+      projectDetailKeyboard(lang, project)[1],
+      project.links.map((link) => ({ text: link.name, url: link.url }))
+    );
+  }
+});
+
+test("documentation link labels and attributes are HTML escaped", () => {
+  const card = projectCard({
+    name: "fixture",
+    lang: "Python",
+    desc: "Documentation",
+    links: [{ name: "<Registry>", url: 'https://example.test/?a="value"&b=1' }]
+  }, {}, "en");
+  assert.ok(card.includes('<a href="https://example.test/?a=&quot;value&quot;&amp;b=1">&lt;Registry&gt;</a>'));
+});
+
 test("/search escapes HTML in the query and finds projects by stack", async () => {
   const calls = installFetch();
   const env = makeEnv();
@@ -375,6 +401,13 @@ test("inline query returns photos for projects with screenshots", async () => {
   assert.equal(photos.length, 11);
   assert.equal(articles.length, 9);
   assert.ok(photos.every((result) => result.photo_url.startsWith("https://raw.githubusercontent.com/")));
+  const skillPhoto = photos.find((result) => result.title === "Agent Skills");
+  assert.match(skillPhoto.caption, /120/);
+  assert.deepEqual(skillPhoto.reply_markup.inline_keyboard[1].map((button) => button.url), [
+    "https://ssrjkk.github.io/agent-skills/skills_catalog.json",
+    "https://ssrjkk.github.io/agent-skills/roadmaps.html",
+    "https://ssrjkk.github.io/agent-skills/guides.html"
+  ]);
 });
 
 test("/setup requires the setup key and registers commands", async () => {
