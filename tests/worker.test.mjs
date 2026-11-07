@@ -1,11 +1,30 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { spawnSync } from "node:child_process";
 
 import worker, { projectCard, projectDetailKeyboard } from "../cloudflare-worker/worker.js";
 
 const BASE = "https://bot.example";
 const SECRET = "hook-secret";
+
+function checkBundleData(mutate = () => {}) {
+  const root = mkdtempSync(join(tmpdir(), "port-bundle-"));
+  try {
+    for (const folder of ["scripts", "src", "cloudflare-worker"]) mkdirSync(join(root, folder));
+    for (const file of ["scripts/check-bundle.mjs", "src/worker.js", "cloudflare-worker/worker.js", "cloudflare-worker/wrangler.toml"]) {
+      copyFileSync(new URL(`../${file}`, import.meta.url), join(root, file));
+    }
+    const data = JSON.parse(readFileSync(new URL("../projects.json", import.meta.url), "utf8"));
+    mutate(data);
+    writeFileSync(join(root, "projects.json"), JSON.stringify(data));
+    return spawnSync(process.execPath, [join(root, "scripts/check-bundle.mjs")], { encoding: "utf8" });
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+}
 
 function jsonResponse(body, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -140,6 +159,22 @@ function keyboardData(call) {
   return (call.body.reply_markup?.inline_keyboard ?? []).flat().map((button) => button.callback_data ?? button.url);
 }
 
+test("bundle validation accepts the current catalogue", () => {
+  const result = checkBundleData();
+  assert.equal(result.status, 0, result.stderr);
+});
+
+for (const [name, mutate] of [
+  ["impostor repository host", (data) => { data.projects[0].repo = "https://example.test/ssrjkk/shopwatch"; }],
+  ["lookalike Telegram host", (data) => { data.projects[0].bot = "https://not.t.me/wwwatchshop_bot"; }],
+  ["insecure documentation URL", (data) => { data.projects.find((p) => p.name === "agent-skills").links[0].url = "http://example.test/registry"; }]
+]) {
+  test(`bundle validation rejects ${name}`, () => {
+    const result = checkBundleData(mutate);
+    assert.equal(result.status, 1, result.stdout);
+  });
+}
+
 test("health endpoint answers OK", async () => {
   const response = await worker.fetch(new Request(`${BASE}/health`), makeEnv(), makeCtx());
   assert.equal(response.status, 200);
@@ -217,9 +252,9 @@ test("/sites lists every project site as a URL button", async () => {
   assert.match(sent.body.text, /Сайты проектов/);
   const urls = keyboardData(sent).filter((value) => value.startsWith("https://"));
   assert.equal(urls.length, 11);
-  assert.ok(urls.includes("https://ssrjkk.github.io/shopwatch/"));
-  assert.ok(urls.includes("https://tippy-egi.pages.dev"));
-  assert.ok(urls.includes("https://wake-7k6.pages.dev"));
+  assert.ok(new Set(urls).has("https://ssrjkk.github.io/shopwatch/"));
+  assert.ok(new Set(urls).has("https://tippy-egi.pages.dev"));
+  assert.ok(new Set(urls).has("https://wake-7k6.pages.dev"));
 });
 
 test("/bots lists every Telegram bot as a URL button", async () => {
@@ -230,8 +265,8 @@ test("/bots lists every Telegram bot as a URL button", async () => {
   assert.match(sent.body.text, /Telegram-боты/);
   const urls = keyboardData(sent).filter((value) => value.startsWith("https://"));
   assert.equal(urls.length, 5);
-  assert.ok(urls.includes("https://t.me/ssrjkk_bot"));
-  assert.ok(urls.includes("https://t.me/wwwatchshop_bot"));
+  assert.ok(new Set(urls).has("https://t.me/ssrjkk_bot"));
+  assert.ok(new Set(urls).has("https://t.me/wwwatchshop_bot"));
 });
 
 test("project detail sends the screenshot with site, repo and bot buttons", async () => {
@@ -245,9 +280,9 @@ test("project detail sends the screenshot with site, repo and bot buttons", asyn
 
   const buttons = photos[0].body.reply_markup.inline_keyboard.flat();
   const urls = buttons.map((button) => button.url).filter(Boolean);
-  assert.ok(urls.includes("https://ssrjkk.github.io/shopwatch/"));
-  assert.ok(urls.includes("https://github.com/ssrjkk/shopwatch"));
-  assert.ok(urls.includes("https://t.me/wwwatchshop_bot"));
+  assert.ok(new Set(urls).has("https://ssrjkk.github.io/shopwatch/"));
+  assert.ok(new Set(urls).has("https://github.com/ssrjkk/shopwatch"));
+  assert.ok(new Set(urls).has("https://t.me/wwwatchshop_bot"));
 });
 
 test("project detail falls back to a text message when the photo fails", async () => {
@@ -289,8 +324,8 @@ test("a project marked private hides the repository link", () => {
     .flat()
     .map((button) => button.url)
     .filter(Boolean);
-  assert.equal(urls.includes("https://github.com/ssrjkk/port"), false);
-  assert.ok(urls.includes("https://t.me/ssrjkk_bot"));
+  assert.equal(new Set(urls).has("https://github.com/ssrjkk/port"), false);
+  assert.ok(new Set(urls).has("https://t.me/ssrjkk_bot"));
 });
 
 test("the live catalogue publishes a repository link for every project", () => {
@@ -301,16 +336,13 @@ test("the live catalogue publishes a repository link for every project", () => {
   assert.equal(catalogue.projects.filter((project) => project.private).length, 0);
 
   for (const project of catalogue.projects.filter((entry) => entry.repo)) {
-    assert.match(
-      projectCard(project, {}, "ru"),
-      new RegExp(`github\\.com/ssrjkk/${project.name.replace(/\./g, "\\.")}`),
-      `${project.name}: ссылка на репозиторий должна быть в карточке`
-    );
+    const links = new Set(projectCard(project, {}, "ru").split("\n").at(-1).split(" · "));
+    assert.ok(links.has(`<a href="${project.repo}">GitHub</a>`), `${project.name}: repository link missing`);
     const urls = projectDetailKeyboard("ru", project)
       .flat()
       .map((button) => button.url)
       .filter(Boolean);
-    assert.ok(urls.includes(project.repo), `${project.name}: кнопка GitHub должна вести в репозиторий`);
+    assert.ok(new Set(urls).has(project.repo), `${project.name}: кнопка GitHub должна вести в репозиторий`);
   }
 });
 

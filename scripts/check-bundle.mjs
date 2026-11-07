@@ -44,7 +44,8 @@ const problems = [];
 const fail = (message) => problems.push(message);
 const isUrl = (value, protocol = "https:") => {
   try {
-    return new URL(value).protocol === protocol;
+    const url = new URL(value);
+    return url.protocol === protocol && !url.username && !url.password;
   } catch {
     return false;
   }
@@ -89,17 +90,17 @@ for (const [i, p] of (data.projects || []).entries()) {
 
   // --- 3. Ссылки ---------------------------------------------------------
   if (!isUrl(p.repo)) fail(`${label}: repo не является URL: ${p.repo}`);
-  if (!p.repo.endsWith(`/${data.github}/${p.name}`)) {
+  if (p.repo !== `https://github.com/${data.github}/${p.name}`) {
     fail(`${label}: repo должен вести на github.com/${data.github}/${p.name}`);
   }
   for (const key of ["site", "bot"]) {
     if (p[key] === undefined) continue;
     if (!isUrl(p[key])) fail(`${label}: ${key} не является https-URL: ${p[key]}`);
   }
-  if (p.bot !== undefined && !new URL(p.bot).hostname.endsWith("t.me")) {
+  if (isUrl(p.bot) && new URL(p.bot).hostname !== "t.me") {
     fail(`${label}: bot должен вести на t.me, а не на ${p.bot}`);
   }
-  if (p.site !== undefined && new URL(p.site).hostname.endsWith("github.io") && !p.site.endsWith("/")) {
+  if (isUrl(p.site) && new URL(p.site).hostname.endsWith(".github.io") && !p.site.endsWith("/")) {
     fail(`${label}: site на GitHub Pages должен заканчиваться слэшем: ${p.site}`);
   }
   if (p.shot !== undefined) {
@@ -108,6 +109,10 @@ for (const [i, p] of (data.projects || []).entries()) {
     if (!p.shot.startsWith(expected)) {
       fail(`${label}: shot должен лежать в ${expected}, а не в ${p.shot}`);
     }
+  }
+  for (const link of p.links || []) {
+    if (typeof link?.name !== "string" || !link.name.trim()) fail(`${label}: пустое имя ссылки документации`);
+    if (!isUrl(link?.url)) fail(`${label}: ссылка документации должна быть https-URL без учётных данных`);
   }
 }
 
